@@ -1,8 +1,67 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
+
+const allPosts = await getCollection("blog");
+const recentPosts = allPosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
-<BaseLayout title="Hubs">
-  <h1>Welcome</h1>
-  <p>A minimal personal blog and project hub. More coming soon.</p>
+<BaseLayout title="Hubs" description="A personal blog and project hub.">
+  <!-- Hero / Intro -->
+  <section class="py-16 text-center">
+    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+      Welcome to Hubs
+    </h1>
+    <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-gray-600">
+      A minimal personal blog and project hub. I write about technology,
+      share side projects, and document things I learn along the way.
+    </p>
+  </section>
+
+  <!-- Recent Posts -->
+  <section class="py-12">
+    <h2 class="text-2xl font-bold text-gray-900">Recent Posts</h2>
+    {recentPosts.length > 0 ? (
+      <div class="mt-6">
+        {recentPosts.map((post) => (
+          <PostCard
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            url={`/blog/${post.id}`}
+          />
+        ))}
+      </div>
+    ) : (
+      <p class="mt-4 text-gray-500">No posts yet. Stay tuned!</p>
+    )}
+    <div class="mt-8">
+      <a
+        href="/blog"
+        class="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+      >
+        View all posts &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="py-12">
+    <h2 class="text-2xl font-bold text-gray-900">Projects</h2>
+    <p class="mt-4 text-gray-600 leading-relaxed">
+      I build tools, experiments, and side projects. Check them out to see what
+      I've been working on.
+    </p>
+    <div class="mt-6">
+      <a
+        href="/projects"
+        class="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+      >
+        View all projects &rarr;
+      </a>
+    </div>
+  </section>
 </BaseLayout>
