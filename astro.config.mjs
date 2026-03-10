@@ -7,7 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://username.github.io/hubs',
+  site: 'https://baysavevl.github.io',
+  base: '/hubs',
   output: 'static',
   integrations: [mdx()],
 

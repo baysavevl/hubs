@@ -13,7 +13,9 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(node -e \"console.log\\(require\\('./node_modules/astro/package.json'\\).version\\)\")",
-      "Bash(node -e \"const pkg = require\\('./node_modules/astro/package.json'\\); console.log\\(pkg.version\\)\")"
+      "Bash(node -e \"const pkg = require\\('./node_modules/astro/package.json'\\); console.log\\(pkg.version\\)\")",
+      "Bash(git -C /Users/lap14894/Documents/VinhL/Code/Personal/hubs log --oneline)",
+      "Bash(git -C /Users/lap14894/Documents/VinhL/Code/Personal/hubs remote -v)"
     ]
   }
 }

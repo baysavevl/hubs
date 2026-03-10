@@ -19,7 +19,7 @@ const projects = (await getCollection("projects")).sort((a, b) => {
         <ProjectCard
           title={project.data.title}
           description={project.data.description}
-          url={`/projects/${project.id}`}
+          url={`${import.meta.env.BASE_URL}projects/${project.id}`}
           featured={project.data.featured}
         />
       ))
