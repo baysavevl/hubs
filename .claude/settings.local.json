@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/lap14894/Documents/VinhL/Code/Personal/hubs log --oneline -5)",
+      "mcp__plugin_context7_context7__resolve-library-id",
+      "mcp__plugin_context7_context7__query-docs",
+      "Bash(npm create:*)",
+      "Read(//Users/lap14894/Documents/VinhL/Code/Personal/**)",
+      "Bash(rm -rf _astro_tmp)",
+      "Bash(npm install:*)"
+    ]
+  }
+}
