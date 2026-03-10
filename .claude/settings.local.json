@@ -7,7 +7,11 @@
       "Bash(npm create:*)",
       "Read(//Users/lap14894/Documents/VinhL/Code/Personal/**)",
       "Bash(rm -rf _astro_tmp)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(npx astro:*)",
+      "Bash(npm run:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
