@@ -14,23 +14,23 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 const { Content, headings } = await render(project);
 const hasHeadings = headings && headings.length > 0;
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title={project.data.title} description={project.data.description}>
-  <article>
-    <header class="mb-8">
-      <h1 class="text-3xl font-bold text-gray-900">{project.data.title}</h1>
-      {project.data.description && (
-        <p class="mt-2 text-lg text-gray-600">{project.data.description}</p>
-      )}
-    </header>
+  <nav class="mb-6 text-sm text-[var(--color-text-muted)]">
+    <a href={`${base}projects`} class="hover:text-[var(--color-accent)]">Projects</a>
+    <span class="mx-2">/</span>
+    <span class="text-[var(--color-text)]">{project.data.title}</span>
+  </nav>
 
+  <article>
     {hasHeadings ? (
       <div class="project-layout">
-        <TableOfContents headings={headings} />
-        <div class="prose prose-gray max-w-none">
+        <div class="project-content prose prose-gray max-w-none">
           <Content />
         </div>
+        <TableOfContents headings={headings} />
       </div>
     ) : (
       <div class="prose prose-gray max-w-none">
@@ -47,6 +47,11 @@ const hasHeadings = headings && headings.length > 0;
     align-items: flex-start;
   }
 
+  .project-content {
+    flex: 1;
+    min-width: 0;
+  }
+
   @media (max-width: 1023px) {
     .project-layout {
       display: block;
@@ -57,8 +62,7 @@ const hasHeadings = headings && headings.length > 0;
 {hasHeadings && (
   <style is:global>
     main {
-      max-width: 60rem !important;
+      max-width: 64rem !important;
     }
   </style>
 )}
-
