@@ -26,7 +26,12 @@
       "WebFetch(domain:services.google.com)",
       "WebSearch",
       "WebFetch(domain:megadigital.ai)",
-      "WebFetch(domain:www.productsup.com)"
+      "WebFetch(domain:www.productsup.com)",
+      "Bash(node -e \"\nconst data = require\\('./public/data/knowledge-base.json'\\);\nconsole.log\\('Total entries:', data.length\\);\nconst cats = {};\ndata.forEach\\(e => { cats[e.category] = \\(cats[e.category] || 0\\) + 1; }\\);\nconsole.log\\('By category:'\\);\nObject.entries\\(cats\\).sort\\(\\).forEach\\(\\([k,v]\\) => console.log\\('  ' + k + ': ' + v\\)\\);\nconst ids = data.map\\(e => e.id\\);\nconst dupes = ids.filter\\(\\(id, i\\) => ids.indexOf\\(id\\) !== i\\);\nconsole.log\\('Duplicate IDs:', dupes.length ? dupes : 'none'\\);\nconsole.log\\('JSON is valid.'\\);\n\")",
+      "Bash(node -e 'const data = require\\(\"./public/data/knowledge-base.json\"\\); console.log\\(\"Total entries:\", data.length\\); const cats = {}; data.forEach\\(e => { cats[e.category] = \\(cats[e.category] || 0\\) + 1; }\\); console.log\\(\"By category:\"\\); Object.entries\\(cats\\).sort\\(\\).forEach\\(\\([k,v]\\) => console.log\\(\"  \" + k + \": \" + v\\)\\); const ids = data.map\\(e => e.id\\); const dupes = ids.filter\\(\\(id, i\\) => ids.indexOf\\(id\\) !== i\\); console.log\\(\"Duplicate IDs:\", dupes.length ? dupes : \"none\"\\); console.log\\(\"JSON is valid.\"\\);')",
+      "Bash(python3 -c \"\nimport json\nwith open\\('public/data/knowledge-base.json'\\) as f:\n    data = json.load\\(f\\)\nprint\\('Total entries:', len\\(data\\)\\)\ncats = {}\nfor e in data:\n    cats[e['category']] = cats.get\\(e['category'], 0\\) + 1\nprint\\('By category:'\\)\nfor k in sorted\\(cats\\):\n    print\\(f'  {k}: {cats[k]}'\\)\nids = [e['id'] for e in data]\ndupes = [x for x in ids if ids.count\\(x\\) > 1]\nprint\\('Duplicate IDs:', set\\(dupes\\) if dupes else 'none'\\)\nprint\\('JSON is valid.'\\)\n\")",
+      "Bash(node -e \"const kb = require\\('/Users/lap14894/Documents/VinhL/Code/Personal/hubs/public/data/knowledge-base.json'\\); console.log\\('Entries:', kb.length\\); const cats = {}; kb.forEach\\(e => { cats[e.category] = \\(cats[e.category]||0\\)+1; }\\); console.log\\('Categories:', cats\\);\")",
+      "Bash(xargs ls:*)"
     ]
   }
 }

@@ -62,7 +62,7 @@ export class ChatEngine {
     if (tokens.length === 0) {
       return {
         answer: "I'd be happy to help! Try asking about **Google Ads setup**, **campaign types**, **bidding strategies**, **keyword research**, or **optimization tips**.",
-        links: [{ text: "Browse the Knowledge Base", url: "/hubs/projects/google-ads/" }],
+        links: [{ text: "Browse the Knowledge Base", url: "/google-mindful-solution-architect/projects/google-ads/" }],
         category: "general",
       };
     }
@@ -75,7 +75,7 @@ export class ChatEngine {
     if (scored.length === 0) {
       return {
         answer: "I don't have a specific answer for that yet, but our comprehensive Google Ads guide likely covers it. You can also try rephrasing your question with specific Google Ads terms.",
-        links: [{ text: "View Complete Guide", url: "/hubs/projects/google-ads/" }],
+        links: [{ text: "View Complete Guide", url: "/google-mindful-solution-architect/projects/google-ads/" }],
         category: "fallback",
       };
     }

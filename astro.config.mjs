@@ -8,7 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://baysavevl.github.io',
-  base: '/hubs/',
+  base: '/google-mindful-solution-architect/',
   output: 'static',
   integrations: [mdx()],
 

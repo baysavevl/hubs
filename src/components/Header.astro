@@ -26,7 +26,7 @@ function isActive(path: string) {
         href={base}
         class:list={[
           "transition-colors",
-          isActive(base) && !isActive(`${base}projects`) && !isActive(`${base}blog`)
+          isActive(base) && !isActive(`${base}projects`) && !isActive(`${base}success-story`)
             ? "text-[var(--color-google-blue)]"
             : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]",
         ]}
@@ -45,10 +45,10 @@ function isActive(path: string) {
         Knowledge Base
       </a>
       <a
-        href={`${base}blog`}
+        href={`${base}success-story`}
         class:list={[
           "transition-colors",
-          isActive(`${base}blog`)
+          isActive(`${base}success-story`)
             ? "text-[var(--color-google-blue)]"
             : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]",
         ]}

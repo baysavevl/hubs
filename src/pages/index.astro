@@ -43,7 +43,7 @@ const featuredProjects = projects.filter(p => p.data.featured);
         <p>Everything from account setup to advanced optimization — your comprehensive reference.</p>
         <span class="resource-link">Read the guide &rarr;</span>
       </a>
-      <a href={`${base}blog`} class="resource-card">
+      <a href={`${base}success-story`} class="resource-card">
         <span class="resource-icon">🌏</span>
         <h3>SEA Success Stories</h3>
         <p>Real case studies from Vietnam, Thailand, Indonesia, and more.</p>
@@ -63,11 +63,11 @@ const featuredProjects = projects.filter(p => p.data.featured);
     <section class="recent-section">
       <div class="section-header">
         <h2 class="section-heading">Latest Success Stories</h2>
-        <a href={`${base}blog`} class="section-link">View all &rarr;</a>
+        <a href={`${base}success-story`} class="section-link">View all &rarr;</a>
       </div>
       <div class="recent-grid">
         {recentPosts.map((post) => (
-          <a href={`${base}blog/${post.id}`} class="recent-card">
+          <a href={`${base}success-story/${post.id}`} class="recent-card">
             {post.data.metric && (
               <span class="recent-metric">{post.data.metric}</span>
             )}

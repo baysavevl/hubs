@@ -12,6 +12,7 @@
     "@astrojs/mdx": "^4.3.13",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^5.17.1",
+    "leaflet": "^1.9.4",
     "tailwindcss": "^4.2.1"
   }
 }
