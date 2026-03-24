@@ -35,6 +35,7 @@ const base = import.meta.env.BASE_URL;
     overflow: hidden; background: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     font-family: var(--font-sans);
+    position: relative;
   }
 
   /* ═══ Sidebar ═══ */
@@ -242,6 +243,18 @@ const base = import.meta.env.BASE_URL;
   }
   #ms-send:hover { background: #1E40AF; }
 
+  /* ═══ Inline notification (replaces browser alert) ═══ */
+  .ms-notice {
+    position: absolute; top: 50px; left: 50%; transform: translateX(-50%);
+    background: #FEF2F2; border: 1px solid #FECACA; color: #991B1B;
+    padding: 0.5rem 1rem; border-radius: 10px; font-size: 0.78rem;
+    font-family: var(--font-sans); font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 10;
+    animation: noticeIn 0.2s ease;
+    white-space: nowrap;
+  }
+  @keyframes noticeIn { from{opacity:0;transform:translateX(-50%) translateY(-8px)} to{opacity:1;transform:translateX(-50%) translateY(0)} }
+
   @media (max-width: 640px) {
     .ms-side { display: none; }
     .messenger { height: 480px; }
@@ -263,6 +276,13 @@ const base = import.meta.env.BASE_URL;
   }
 
   function esc(t){const d=document.createElement('div');d.textContent=t;return d.innerHTML}
+
+  function showNotice(msg){
+    const old=document.querySelector('.ms-notice');if(old)old.remove();
+    const n=document.createElement('div');n.className='ms-notice';n.textContent=msg;
+    document.getElementById('chatbot').appendChild(n);
+    setTimeout(()=>n.remove(),3000);
+  }
   function md(text){
     const blocks=text.split(/\n\n+/);let h='';
     for(const b of blocks){const t=b.trim();if(!t)continue;const L=t.split('\n');
@@ -364,7 +384,7 @@ const base = import.meta.env.BASE_URL;
 
   function getTh(id){return threads.find(t=>t.id===id)}
   function newTh(){
-    if(threads.length>=MAX){alert(`Max ${MAX} chats. Delete one first.`);return}
+    if(threads.length>=MAX){showNotice(`Max ${MAX} chats. Delete one to create a new chat.`);return}
     const t={id:gid(),title:'',messages:[],ts:Date.now()};threads.push(t);activeId=t.id;
     save();renderChat();renderSB();document.getElementById('ms-input').focus();
   }
