@@ -5,7 +5,7 @@ const base = import.meta.env.BASE_URL;
 <div class="chatbot" id="chatbot">
   <div class="chat-messages" id="chat-messages">
     <div class="chat-message bot-message">
-      <div class="message-avatar">
+      <div class="message-avatar bot-avatar">
         <div class="avatar-dots">
           <span style="background: var(--color-google-blue)"></span>
           <span style="background: var(--color-google-red)"></span>
@@ -13,10 +13,11 @@ const base = import.meta.env.BASE_URL;
           <span style="background: var(--color-google-green)"></span>
         </div>
       </div>
-      <div class="message-content">
-        <p class="message-text">
-          Hi! I'm your <strong>Google Ads Solutions Architect</strong>. I can help you plan, build, and optimize your Google Ads campaigns. What would you like to know?
-        </p>
+      <div class="message-bubble bot-bubble">
+        <div class="message-text">
+          <p>Hi! I'm your <strong>Google Ads Solutions Architect</strong>. I can help you plan, build, and optimize your Google Ads campaigns.</p>
+          <p>What would you like to know?</p>
+        </div>
         <div class="suggestion-chips" id="suggestion-chips">
           <button class="chip" data-query="How do I set up my first Google Ads campaign?">Set up my first campaign</button>
           <button class="chip" data-query="Which campaign type should I choose for my business?">Choose a campaign type</button>
@@ -52,13 +53,13 @@ const base = import.meta.env.BASE_URL;
 
 <style>
   .chatbot {
-    background: white;
+    background: var(--color-bg-subtle);
     border: 1px solid var(--color-border);
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 520px;
+    height: 560px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   }
 
@@ -68,15 +69,16 @@ const base = import.meta.env.BASE_URL;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
     scroll-behavior: smooth;
   }
 
+  /* --- Message Layout (Gemini-style) --- */
   .chat-message {
     display: flex;
     gap: 0.75rem;
     align-items: flex-start;
-    max-width: 90%;
+    max-width: 85%;
     animation: fadeInUp 0.3s ease;
   }
 
@@ -94,15 +96,19 @@ const base = import.meta.env.BASE_URL;
     to { opacity: 1; transform: translateY(0); }
   }
 
+  /* --- Avatars --- */
   .message-avatar {
     flex-shrink: 0;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-bg-subtle);
+  }
+
+  .bot-avatar {
+    background: white;
     border: 1px solid var(--color-border);
   }
 
@@ -119,67 +125,114 @@ const base = import.meta.env.BASE_URL;
     border-radius: 50%;
   }
 
-  .user-message .message-avatar {
+  .user-avatar {
     background: var(--color-google-blue);
-    border-color: var(--color-google-blue);
-  }
-
-  .user-message .message-avatar::after {
-    content: "U";
     color: white;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
   }
 
-  .user-message .avatar-dots {
-    display: none;
+  /* --- Bubbles --- */
+  .message-bubble {
+    border-radius: 18px;
+    padding: 1rem 1.25rem;
+    line-height: 1.7;
   }
 
-  .message-content {
-    background: var(--color-bg-subtle);
-    padding: 0.875rem 1.125rem;
-    border-radius: 12px;
+  .bot-bubble {
+    background: white;
     border: 1px solid var(--color-border);
+    border-top-left-radius: 4px;
   }
 
-  .user-message .message-content {
+  .user-bubble {
     background: var(--color-google-blue);
-    border-color: var(--color-google-blue);
     color: white;
+    border-top-right-radius: 4px;
   }
 
+  /* --- Rich text inside bot messages --- */
   .message-text {
     font-size: 0.9rem;
-    line-height: 1.65;
-    margin: 0;
     color: var(--color-text);
+  }
+
+  .message-text p {
+    margin: 0 0 0.6rem;
+  }
+
+  .message-text p:last-child {
+    margin-bottom: 0;
   }
 
   .message-text :global(strong) {
     font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .message-text :global(em) {
+    font-style: italic;
   }
 
   .message-text :global(code) {
     font-family: var(--font-mono);
     font-size: 0.85em;
-    background: rgba(0,0,0,0.06);
-    padding: 0.1em 0.35em;
-    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.06);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
   }
 
-  .user-message .message-text {
+  .message-text :global(ul),
+  .message-text :global(ol) {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+
+  .message-text :global(li) {
+    margin-bottom: 0.35rem;
+  }
+
+  .message-text :global(li:last-child) {
+    margin-bottom: 0;
+  }
+
+  .message-text :global(h4) {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0.75rem 0 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .message-text :global(h4:first-child) {
+    margin-top: 0;
+  }
+
+  .message-text :global(hr) {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 0.75rem 0;
+  }
+
+  .user-bubble .message-text {
     color: white;
   }
 
+  .user-bubble .message-text p {
+    margin: 0;
+  }
+
+  /* --- Suggestion Chips --- */
   .suggestion-chips {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 0.875rem;
+    margin-top: 1rem;
   }
 
   .chip {
-    background: white;
+    background: var(--color-bg-subtle);
     border: 1px solid var(--color-border);
     border-radius: 100px;
     padding: 0.4rem 0.85rem;
@@ -196,11 +249,12 @@ const base = import.meta.env.BASE_URL;
     border-color: #aecbfa;
   }
 
+  /* --- Links --- */
   .message-links {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-    margin-top: 0.75rem;
+    margin-top: 0.85rem;
   }
 
   .message-link {
@@ -211,8 +265,8 @@ const base = import.meta.env.BASE_URL;
     color: var(--color-google-blue);
     text-decoration: none;
     font-weight: 500;
-    padding: 0.25rem 0.6rem;
-    border-radius: 6px;
+    padding: 0.3rem 0.7rem;
+    border-radius: 8px;
     background: #e8f0fe;
     transition: background 0.15s;
   }
@@ -221,8 +275,9 @@ const base = import.meta.env.BASE_URL;
     background: #d2e3fc;
   }
 
+  /* --- Related Questions --- */
   .related-questions {
-    margin-top: 0.75rem;
+    margin-top: 0.85rem;
     padding-top: 0.75rem;
     border-top: 1px solid var(--color-border);
   }
@@ -230,7 +285,7 @@ const base = import.meta.env.BASE_URL;
   .related-questions p {
     font-size: 0.75rem;
     color: var(--color-text-muted);
-    margin: 0 0 0.35rem;
+    margin: 0 0 0.4rem;
     font-weight: 500;
   }
 
@@ -242,7 +297,7 @@ const base = import.meta.env.BASE_URL;
     font-size: 0.8rem;
     font-family: var(--font-sans);
     cursor: pointer;
-    padding: 0.2rem 0;
+    padding: 0.25rem 0;
     text-align: left;
     transition: opacity 0.15s;
   }
@@ -251,15 +306,16 @@ const base = import.meta.env.BASE_URL;
     opacity: 0.7;
   }
 
+  /* --- Typing Indicator --- */
   .typing-indicator {
     display: flex;
-    gap: 4px;
-    padding: 0.5rem 0;
+    gap: 5px;
+    padding: 0.4rem 0;
   }
 
   .typing-indicator span {
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: var(--color-text-muted);
     animation: typing 1.2s infinite;
@@ -273,6 +329,7 @@ const base = import.meta.env.BASE_URL;
     30% { opacity: 1; transform: scale(1); }
   }
 
+  /* --- Input Area --- */
   .chat-input-area {
     padding: 1rem 1.5rem 1rem;
     border-top: 1px solid var(--color-border);
@@ -293,6 +350,7 @@ const base = import.meta.env.BASE_URL;
   .chat-input-wrapper:focus-within {
     border-color: var(--color-google-blue);
     box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.15);
+    background: white;
   }
 
   #chat-input {
@@ -339,6 +397,12 @@ const base = import.meta.env.BASE_URL;
   .chat-disclaimer a {
     color: var(--color-google-blue);
   }
+
+  @media (max-width: 640px) {
+    .chat-message {
+      max-width: 92%;
+    }
+  }
 </style>
 
 <script>
@@ -363,11 +427,52 @@ const base = import.meta.env.BASE_URL;
   }
 
   function markdownToHtml(text) {
+    // Split into blocks by double newline (paragraphs)
+    const blocks = text.split(/\n\n+/);
+    let html = '';
+
+    for (const block of blocks) {
+      const trimmed = block.trim();
+      if (!trimmed) continue;
+
+      // Check if this block is a list
+      const lines = trimmed.split('\n');
+      const isBulletList = lines.every(l => /^\s*[-*•]\s/.test(l.trim()));
+      const isNumberedList = lines.every(l => /^\s*\d+[.)]\s/.test(l.trim()));
+
+      if (isBulletList) {
+        html += '<ul>';
+        for (const line of lines) {
+          const content = line.trim().replace(/^[-*•]\s+/, '');
+          html += `<li>${inlineFormat(content)}</li>`;
+        }
+        html += '</ul>';
+      } else if (isNumberedList) {
+        html += '<ol>';
+        for (const line of lines) {
+          const content = line.trim().replace(/^\d+[.)]\s+/, '');
+          html += `<li>${inlineFormat(content)}</li>`;
+        }
+        html += '</ol>';
+      } else if (trimmed.startsWith('####')) {
+        html += `<h4>${inlineFormat(trimmed.replace(/^####\s*/, ''))}</h4>`;
+      } else if (trimmed === '---') {
+        html += '<hr>';
+      } else {
+        // Regular paragraph — handle single newlines as <br>
+        const para = lines.map(l => inlineFormat(l.trim())).join('<br>');
+        html += `<p>${para}</p>`;
+      }
+    }
+
+    return html;
+  }
+
+  function inlineFormat(text) {
     return text
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.+?)\*/g, '<em>$1</em>')
-      .replace(/`(.+?)`/g, '<code>$1</code>')
-      .replace(/\n/g, '<br>');
+      .replace(/`(.+?)`/g, '<code>$1</code>');
   }
 
   function addMessage(content, isUser = false) {
@@ -377,13 +482,13 @@ const base = import.meta.env.BASE_URL;
 
     if (isUser) {
       msg.innerHTML = `
-        <div class="message-avatar"></div>
-        <div class="message-content">
-          <p class="message-text">${escapeHtml(content)}</p>
+        <div class="message-avatar user-avatar">U</div>
+        <div class="message-bubble user-bubble">
+          <div class="message-text"><p>${escapeHtml(content)}</p></div>
         </div>`;
     } else {
       msg.innerHTML = `
-        <div class="message-avatar">
+        <div class="message-avatar bot-avatar">
           <div class="avatar-dots">
             <span style="background: var(--color-google-blue)"></span>
             <span style="background: var(--color-google-red)"></span>
@@ -391,8 +496,8 @@ const base = import.meta.env.BASE_URL;
             <span style="background: var(--color-google-green)"></span>
           </div>
         </div>
-        <div class="message-content">
-          <p class="message-text">${content}</p>
+        <div class="message-bubble bot-bubble">
+          <div class="message-text">${content}</div>
         </div>`;
     }
 
@@ -407,7 +512,7 @@ const base = import.meta.env.BASE_URL;
     msg.className = 'chat-message bot-message';
     msg.id = 'typing';
     msg.innerHTML = `
-      <div class="message-avatar">
+      <div class="message-avatar bot-avatar">
         <div class="avatar-dots">
           <span style="background: var(--color-google-blue)"></span>
           <span style="background: var(--color-google-red)"></span>
@@ -415,7 +520,7 @@ const base = import.meta.env.BASE_URL;
           <span style="background: var(--color-google-green)"></span>
         </div>
       </div>
-      <div class="message-content">
+      <div class="message-bubble bot-bubble">
         <div class="typing-indicator"><span></span><span></span><span></span></div>
       </div>`;
     messages.appendChild(msg);
@@ -441,7 +546,7 @@ const base = import.meta.env.BASE_URL;
     removeTypingIndicator();
 
     if (!engine) {
-      addMessage("I'm still loading my knowledge base. Please try again in a moment.");
+      addMessage(markdownToHtml("I'm still loading my knowledge base. Please try again in a moment."));
       return;
     }
 
