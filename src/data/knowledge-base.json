@@ -3984,5 +3984,967 @@
         "url": "/google-mindful-solution-architect/projects/google-ads/"
       }
     ]
+  },
+  {
+    "id": "hc-responsive-search-ads",
+    "keywords": ["responsive search ads", "RSA", "create RSA", "ad copy", "headlines", "descriptions"],
+    "category": "help-center",
+    "question": "How do I create responsive search ads?",
+    "answer": "Add up to **15 headlines** and 4 descriptions — Google's AI will test combinations and serve the best-performing mix. Pin headlines only when legally required (e.g., disclaimers); over-pinning limits optimization. Aim for diverse headlines covering benefits, features, and CTAs.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-ad-customizers",
+    "keywords": ["ad customizers", "dynamic ads", "countdown", "IF functions", "ad customizer"],
+    "category": "help-center",
+    "question": "How do I use ad customizers in Google Ads?",
+    "answer": "**Ad customizers** dynamically insert text into your ads based on what someone searches, their device, or location. Use countdown customizers for urgency (e.g., \"Sale ends in X days\") and IF functions to show different text on mobile vs desktop. They boost CTR by making ads feel more relevant.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-call-extensions",
+    "keywords": ["call extensions", "phone number", "call ads", "click to call", "call asset"],
+    "category": "help-center",
+    "question": "How do I set up call extensions (call assets)?",
+    "answer": "Go to Ads & Assets > Assets > Call, then add your business phone number. Enable **call reporting** to track calls as conversions — you can set a minimum call duration (e.g., 60 seconds) to filter quality leads. Schedule call assets only during business hours so you don't miss calls.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-sitelink-extensions",
+    "keywords": ["sitelink extensions", "sitelinks", "sitelink assets", "ad extensions"],
+    "category": "help-center",
+    "question": "How do I create sitelink extensions?",
+    "answer": "Add at least **4 sitelinks** per campaign pointing to your most valuable pages (pricing, features, testimonials, contact). Each sitelink needs a unique URL, a 25-character headline, and two 35-character description lines. Sitelinks can increase CTR by 10-20% by giving users more entry points.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-structured-snippets",
+    "keywords": ["structured snippets", "snippet extensions", "header types", "snippet assets"],
+    "category": "help-center",
+    "question": "How do I use structured snippets?",
+    "answer": "**Structured snippets** highlight specific aspects of your products or services under predefined headers like Brands, Types, Services, or Destinations. Add at least 4 values per header — Google recommends keeping them concise (2-3 words each). They add context without taking the user to a different page.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-price-extensions",
+    "keywords": ["price extensions", "price assets", "pricing in ads", "price display"],
+    "category": "help-center",
+    "question": "How do I set up price extensions?",
+    "answer": "Navigate to Assets > Price and select a type (Brands, Services, Product Categories, etc.). Add at least **3 items** with a price, header, description, and final URL each. Price assets pre-qualify clicks by showing costs upfront, which can reduce wasted spend from users outside your price range.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-promotion-extensions",
+    "keywords": ["promotion extensions", "promotion assets", "sale ads", "discount ads", "promo"],
+    "category": "help-center",
+    "question": "How do I create promotion extensions?",
+    "answer": "Go to Assets > Promotion, choose an occasion (Black Friday, Back to School, etc.), and set your discount type — percentage off, monetary discount, or \"up to\" amounts. Add **start and end dates** so the promotion auto-activates and expires. They're great for seasonal sales without editing ad copy.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-image-extensions",
+    "keywords": ["image extensions", "image assets", "visual ads", "ad images"],
+    "category": "help-center",
+    "question": "How do I use image extensions in search ads?",
+    "answer": "**Image assets** add a visual thumbnail next to your search ads on mobile and desktop. Upload square (1:1) and landscape (1.91:1) images that are relevant to your product — avoid logos, text overlays, or collages. Accounts need a good compliance history and 90+ days of activity to be eligible.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-lead-form-extensions",
+    "keywords": ["lead form extensions", "lead gen", "lead form assets", "form fills", "lead generation"],
+    "category": "help-center",
+    "question": "How do I set up lead form extensions?",
+    "answer": "Go to Assets > Lead Form and build your form with fields like name, email, and phone. Keep forms **short (3-4 fields max)** to maximize submissions. Connect your CRM via webhook or download leads manually. You must have a privacy policy URL and your account must have spent over $50K total to be eligible.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-dynamic-remarketing",
+    "keywords": ["dynamic remarketing", "dynamic ads", "product remarketing", "remarketing ads", "retargeting"],
+    "category": "help-center",
+    "question": "How do I create dynamic remarketing ads?",
+    "answer": "Upload a **product or service feed** to Google Merchant Center (or Business Data), then create a Display campaign with dynamic ads enabled. Google auto-generates personalized ads showing the exact products visitors viewed. Use responsive display ads format for the best reach and performance across placements.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-similar-audiences",
+    "keywords": ["similar audiences", "lookalike audiences", "audience expansion", "similar segments"],
+    "category": "help-center",
+    "question": "How do I set up similar audiences in Google Ads?",
+    "answer": "Similar audiences (now called **similar segments**) are being phased out in favor of optimized targeting and audience signals. For new campaigns, use first-party audience lists as signals in Performance Max or Discovery campaigns — Google's AI will automatically find similar users. Transition existing similar audience campaigns by enabling optimized targeting.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-optimized-targeting",
+    "keywords": ["optimized targeting", "audience expansion", "smart targeting", "targeting expansion"],
+    "category": "help-center",
+    "question": "How do I use optimized targeting?",
+    "answer": "**Optimized targeting** uses your conversion data and audience signals to find users likely to convert, even beyond your manually selected audiences. It's on by default for Display and Discovery campaigns. To control it, go to your ad group settings — keep it on if volume is your goal, turn it off if you need strict audience control.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-video-action-campaigns",
+    "keywords": ["video action campaigns", "VAC", "YouTube conversions", "video for action", "TrueView for action"],
+    "category": "help-center",
+    "question": "How do I create video action campaigns?",
+    "answer": "Create a new Video campaign with the **Conversions** goal. Add skippable in-stream and in-feed video ads — Google will automatically serve across YouTube, partners, and Discover. Use Target CPA or Maximize Conversions bidding. Include a clear CTA button and ensure your landing page matches the video's promise.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-app-campaigns",
+    "keywords": ["app campaigns", "app installs", "app engagement", "UAC", "universal app campaigns"],
+    "category": "help-center",
+    "question": "How do I set up app campaigns for installs vs engagement?",
+    "answer": "For **installs**, choose \"App installs\" as your goal — Google will optimize across Search, Play, YouTube, and Display to drive downloads. For **engagement**, target existing users with deep links to re-engage lapsed users. Provide diverse text, image, and video assets; Google's ML handles the rest.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-local-campaigns",
+    "keywords": ["local campaigns", "local ads", "store visits", "local inventory", "google maps ads"],
+    "category": "help-center",
+    "question": "How do I use local campaigns to drive store visits?",
+    "answer": "Local campaigns (now part of **Performance Max**) promote your physical locations across Search, Maps, YouTube, and Display. Link your Google Business Profile, provide assets, and set a budget. Google optimizes for store visits or local actions. You need verified locations and sufficient foot traffic data for store visit conversions.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-hotel-campaigns",
+    "keywords": ["hotel campaigns", "hotel ads", "travel ads", "hotel booking", "hotel center"],
+    "category": "help-center",
+    "question": "How do I set up hotel campaigns?",
+    "answer": "Link your **Hotel Center** feed to Google Ads, then create a Hotel campaign. Set bids per night using commission (pay per booking) or CPC models. Hotel ads show live rates and availability directly in Search and Maps. Ensure your rate accuracy is high — Google penalizes properties with frequent price discrepancies.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-shared-budgets",
+    "keywords": ["shared budgets", "budget sharing", "campaign budgets", "budget management"],
+    "category": "help-center",
+    "question": "How do I use shared budgets across campaigns?",
+    "answer": "Go to Tools > Shared Library > Shared Budgets to create a **shared budget** that distributes spend across multiple campaigns automatically. Google shifts budget to whichever campaign has the most opportunity that day. Avoid sharing budgets between campaigns with very different goals or when you need strict per-campaign spending control.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-negative-keyword-lists",
+    "keywords": ["negative keyword lists", "shared negative keywords", "negative keywords", "keyword exclusions"],
+    "category": "help-center",
+    "question": "How do I create and manage negative keyword lists?",
+    "answer": "Go to Tools > Shared Library > **Negative Keyword Lists** to create reusable lists you can apply across multiple campaigns. Build lists for irrelevant terms (competitors, jobs, free, DIY) and review the search terms report weekly to add new negatives. This prevents wasted spend on clicks that won't convert.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-ip-exclusions",
+    "keywords": ["IP exclusions", "IP blocking", "block IP", "click fraud", "invalid clicks"],
+    "category": "help-center",
+    "question": "How do I set up IP exclusions in Google Ads?",
+    "answer": "Go to Campaign Settings > Additional Settings > **IP Exclusions** and enter specific IP addresses you want to block (up to 500 per campaign). Use this to exclude your office IP, known competitors, or suspicious click sources. For broader click fraud protection, consider third-party tools like ClickCease alongside Google's built-in invalid click filtering.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-ad-schedule-adjustments",
+    "keywords": ["ad schedule", "bid adjustments", "dayparting", "time of day", "schedule bidding"],
+    "category": "help-center",
+    "question": "How do I use ad schedule bid adjustments?",
+    "answer": "Go to Ad Schedule, create time blocks, then set **bid adjustments** from -90% to +900% for each period. Analyze your hour-of-day and day-of-week performance data first — increase bids during high-converting hours and decrease during low-value times. Note: bid adjustments don't apply when using fully automated bidding strategies like Target CPA.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-callout-extensions",
+    "keywords": ["callout extensions", "callout assets", "additional text", "callouts"],
+    "category": "help-center",
+    "question": "How do I use callout extensions effectively?",
+    "answer": "**Callout assets** add short, non-clickable text snippets below your ad (e.g., \"Free Shipping,\" \"24/7 Support,\" \"No Contract\"). Add at least 4 callouts per campaign — keep each under 25 characters. Use them for differentiators and benefits that don't need their own landing page. They stack with sitelinks and structured snippets for maximum ad real estate.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-asset-groups",
+    "keywords": ["PMax asset groups", "asset group best practices", "performance max assets", "asset group strategy"],
+    "category": "pmax",
+    "question": "What are PMax asset group best practices?",
+    "answer": "Create separate **asset groups** for each product line or audience theme — don't lump everything together. Provide the maximum number of assets: 20 images, 5 videos, 5 logos, 15 headlines, and 5 descriptions. Google tests combinations, so diversity is key. Check Asset Details to replace \"Low\" performing assets regularly.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-url-expansion",
+    "keywords": ["URL expansion", "final URL expansion", "PMax URLs", "landing page expansion"],
+    "category": "pmax",
+    "question": "How does PMax URL expansion work and should I use it?",
+    "answer": "**Final URL expansion** lets Google replace your provided URL with any page on your site that it thinks will convert better. Keep it on if you have a well-structured site with good landing pages. Turn it off if you need strict control over where traffic lands — use URL exclusion rules to block unwanted pages like careers or blog posts.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-brand-exclusions",
+    "keywords": ["PMax brand exclusions", "brand traffic PMax", "exclude brand", "brand campaigns"],
+    "category": "pmax",
+    "question": "How do I set up brand exclusions in Performance Max?",
+    "answer": "Go to Campaign Settings > **Brand Exclusions** and add your own brand name plus variations. This prevents PMax from cannibalizing your cheaper brand search traffic. Run a separate brand Search campaign to capture that intent at lower CPCs, and let PMax focus on prospecting new customers.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-search-themes",
+    "keywords": ["search themes", "PMax search themes", "keyword themes", "PMax keywords"],
+    "category": "pmax",
+    "question": "What are PMax search themes and how should I use them?",
+    "answer": "**Search themes** let you tell Google which search queries your PMax campaign should target — think of them as keyword signals, not exact keywords. Add 10-25 themes per asset group covering your main product categories and high-intent terms. They're especially valuable for new campaigns without conversion history to guide the algorithm.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-insights-tab",
+    "keywords": ["PMax insights", "insights tab", "performance max reporting", "PMax data", "auction insights"],
+    "category": "pmax",
+    "question": "What can I learn from the PMax insights tab?",
+    "answer": "The Insights tab shows **search categories** driving traffic, audience segments performing best, and auction insights for Search and Shopping placements. Check the \"Consumer Spotlight\" for demographic breakdowns and \"Diagnostics\" for asset-level performance ratings. Use these insights to refine your audience signals and creative strategy.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-lead-gen",
+    "keywords": ["PMax lead generation", "performance max leads", "PMax for leads", "lead gen PMax"],
+    "category": "pmax",
+    "question": "How do I optimize Performance Max for lead generation?",
+    "answer": "Use **offline conversion imports** or enhanced conversions for leads to feed actual sales data back to Google — this prevents PMax from optimizing for junk leads. Set a Target CPA based on your qualified-lead cost, not just form fills. Add strong audience signals using your CRM customer lists and website converters.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-ecommerce",
+    "keywords": ["PMax ecommerce", "PMax retail", "PMax shopping", "performance max shopping", "merchant center PMax"],
+    "category": "pmax",
+    "question": "How should I use PMax for e-commerce and retail?",
+    "answer": "Connect your **Merchant Center feed** and create asset groups by product category or margin tier. Use ROAS targets instead of CPA for e-commerce. Segment high-margin products into their own asset groups with higher ROAS targets. PMax replaces Smart Shopping and includes Shopping, Search, Display, YouTube, and Discover placements.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-audience-signals",
+    "keywords": ["audience signals", "PMax audiences", "custom segments PMax", "audience strategy"],
+    "category": "pmax",
+    "question": "What's the best audience signals strategy for PMax?",
+    "answer": "Layer **multiple signal types**: customer lists (your best buyers), website visitors, custom segments (search terms and URLs your ideal customer uses), and in-market/affinity segments. Audience signals are suggestions, not restrictions — Google will go beyond them. The stronger your signals, the faster the learning phase completes.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-vs-shopping",
+    "keywords": ["PMax vs Shopping", "standard shopping vs PMax", "shopping campaigns", "PMax comparison"],
+    "category": "pmax",
+    "question": "Should I use PMax or Standard Shopping campaigns?",
+    "answer": "**PMax** offers broader reach (Search + Shopping + Display + YouTube) and uses more automation, which often delivers better results at scale. **Standard Shopping** gives you more control over bids, search terms, and product grouping. Many advertisers run both — PMax as the primary driver and Standard Shopping for specific products needing manual control.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-budget",
+    "keywords": ["PMax budget", "performance max budget", "PMax spending", "budget recommendations"],
+    "category": "pmax",
+    "question": "What budget should I set for Performance Max campaigns?",
+    "answer": "Start with at least **$50-100/day** (or 10x your target CPA) to give Google enough data to optimize. PMax needs roughly 50 conversions in 30 days to fully exit the learning phase. Avoid frequent budget changes — adjustments over 20% can reset learning. If budget is tight, consolidate asset groups rather than spreading thin.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-diagnose-underperformance",
+    "keywords": ["PMax underperforming", "PMax not working", "PMax troubleshooting", "fix PMax", "PMax poor results"],
+    "category": "pmax",
+    "question": "How do I diagnose an underperforming PMax campaign?",
+    "answer": "Check the **Insights tab** for search category relevance, then review asset performance ratings and replace \"Low\" assets. Verify your conversion tracking is firing correctly and not counting duplicates. If lead quality is poor, implement offline conversion imports. Also check if brand exclusions are set — PMax often inflates results with brand traffic.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-final-url-expansion",
+    "keywords": ["final URL expansion PMax", "URL expansion settings", "page feeds PMax", "landing pages PMax"],
+    "category": "pmax",
+    "question": "How do I control which landing pages PMax sends traffic to?",
+    "answer": "Use **URL exclusion rules** to block pages you don't want as landing pages (e.g., blog, careers, privacy policy). Alternatively, create a page feed with only approved URLs and enable \"Use URLs from your page feed only.\" This gives you landing page control while still benefiting from PMax's multi-channel reach.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-new-customer-acquisition",
+    "keywords": ["new customer acquisition", "PMax new customers", "customer acquisition goal", "new vs returning"],
+    "category": "pmax",
+    "question": "How do I use PMax's new customer acquisition goal?",
+    "answer": "Enable the **New Customer Acquisition** goal in campaign settings and upload your customer list. PMax will either bid higher for new customers or exclusively target them, depending on your setting. This prevents wasting budget on existing customers who would buy anyway. You need a customer list with 1,000+ matched users for it to work effectively.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-ad-formats",
+    "keywords": ["YouTube ad formats", "skippable ads", "bumper ads", "non-skippable", "in-feed ads", "video ad types"],
+    "category": "youtube",
+    "question": "What are the different YouTube ad formats?",
+    "answer": "**Skippable in-stream** ads play before/during videos (skip after 5s, pay per view). **Non-skippable** run 15s with no skip option (pay per impression). **Bumper ads** are 6-second non-skippable ads for awareness. **In-feed video ads** appear in search results and Home feed. Choose based on your goal — action vs. awareness.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-targeting",
+    "keywords": ["YouTube targeting", "video targeting", "YouTube audiences", "YouTube placements", "video audience"],
+    "category": "youtube",
+    "question": "What targeting options are available for YouTube ads?",
+    "answer": "Target by **demographics** (age, gender, household income), interests (affinity and in-market audiences), life events, or custom segments based on search behavior. Layer in content targeting: specific channels, videos, topics, or keywords. For remarketing, target people who watched your videos, subscribed, or visited your site.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-creative-best-practices",
+    "keywords": ["YouTube creative", "video ad tips", "video creative", "YouTube best practices", "ABCD framework"],
+    "category": "youtube",
+    "question": "What are YouTube creative best practices?",
+    "answer": "Follow Google's **ABCD framework**: Attract attention in the first 5 seconds, Brand early and often, Connect with emotion or story, and Direct with a clear CTA. Keep ads under 30 seconds for action campaigns. Show your product in use, use tight framing for mobile, and include captions since many viewers watch muted.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-remarketing",
+    "keywords": ["YouTube remarketing", "video remarketing", "YouTube retargeting", "video audiences"],
+    "category": "youtube",
+    "question": "How do I set up YouTube remarketing?",
+    "answer": "Link your YouTube channel to Google Ads, then go to Audiences > Your Data to create lists like \"Viewed any video,\" \"Subscribed,\" or \"Viewed specific videos.\" Use these lists to **retarget engaged viewers** with Search, Display, or follow-up video ads. Build a funnel: awareness video first, then retarget viewers with a conversion-focused ad.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-frequency-capping",
+    "keywords": ["frequency capping", "YouTube frequency", "ad fatigue", "impression caps", "frequency management"],
+    "category": "youtube",
+    "question": "How do I set frequency capping for YouTube ads?",
+    "answer": "In your Video campaign settings, set a **frequency cap** to limit how many times one person sees your ad per day, week, or month. For awareness campaigns, 3-5 impressions per week is a good starting point. For action campaigns, cap at 2-3 per day. Monitor your frequency report — performance typically drops after 4+ exposures per week.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-brand-lift",
+    "keywords": ["brand lift", "brand lift measurement", "YouTube measurement", "brand awareness measurement", "brand lift study"],
+    "category": "youtube",
+    "question": "How does YouTube brand lift measurement work?",
+    "answer": "**Brand Lift studies** survey exposed and control groups to measure ad recall, brand awareness, consideration, and purchase intent. You need a minimum spend (typically $10K+ over 10 days per question) and Google sets it up for eligible campaigns. Results appear in the Brand Lift tab and help prove YouTube's upper-funnel impact.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-shorts-ads",
+    "keywords": ["YouTube Shorts ads", "Shorts advertising", "short-form video ads", "vertical video ads"],
+    "category": "youtube",
+    "question": "How do YouTube Shorts ads work?",
+    "answer": "**Shorts ads** appear between organic Shorts content as users scroll. Create vertical (9:16) video assets under 60 seconds. They're served automatically through Video campaigns and PMax — you can't target Shorts exclusively yet. Hook viewers in the first 2 seconds and design for full-screen vertical viewing with sound on.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-audio-ads",
+    "keywords": ["YouTube audio ads", "audio advertising", "podcast ads YouTube", "audio campaigns"],
+    "category": "youtube",
+    "question": "What are YouTube audio ads?",
+    "answer": "**Audio ads** are 15-second sound-focused ads that play during music and podcast content on YouTube. They use a simple static image or animation as the visual. They're ideal for reaching users during screen-off listening sessions. Create them through a Video campaign with the \"Audio\" ad format — CPMs are typically lower than video ads.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-video-reach",
+    "keywords": ["video reach campaigns", "VRC", "YouTube reach", "efficient reach", "awareness campaigns"],
+    "category": "youtube",
+    "question": "What are Video Reach Campaigns?",
+    "answer": "**Video Reach Campaigns** (VRC) let Google mix bumper, skippable, and non-skippable ads automatically to maximize unique reach at the lowest cost. Choose \"Efficient Reach\" for broad awareness or \"Target Frequency\" to ensure users see your message a specific number of times. VRC typically delivers 30-40% more reach than running individual formats separately.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-trueview-action",
+    "keywords": ["TrueView for action", "YouTube for action", "YouTube conversions", "video action", "YouTube CPA"],
+    "category": "youtube",
+    "question": "What is YouTube for Action (TrueView for Action)?",
+    "answer": "Now called **Video Action Campaigns**, these optimize for on-site conversions like purchases or sign-ups. They serve skippable in-stream and in-feed ads with prominent CTA buttons and headline overlays. Use Target CPA or Maximize Conversions bidding and ensure you have at least 15 conversions per month for stable optimization.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-demand-gen",
+    "keywords": ["Demand Gen", "Discovery ads", "Demand Gen campaigns", "Gmail ads", "Discover feed ads"],
+    "category": "youtube",
+    "question": "What are Demand Gen campaigns and how do they work?",
+    "answer": "**Demand Gen** campaigns (replacing Discovery ads) serve visually rich ads across YouTube, YouTube Shorts, Discover, and Gmail. They're designed for mid-funnel engagement using image carousels, single images, or video. Use audience signals from customer lists and website visitors. They pair well with PMax — Demand Gen for consideration, PMax for conversions.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ga4-audiences-ads",
+    "keywords": ["GA4 audiences", "GA4 audience Google Ads", "analytics audiences", "GA4 remarketing"],
+    "category": "ga4",
+    "question": "How do I use GA4 audiences in Google Ads?",
+    "answer": "Link GA4 to Google Ads, then in GA4 go to Admin > Audiences and create segments based on behavior (e.g., added to cart but didn't purchase). Enable **Ads personalization** and audiences auto-sync to Google Ads within 24-48 hours. GA4 audiences support predictive metrics like \"likely to purchase\" which aren't available in Google Ads alone.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ga4-vs-ads-conversions",
+    "keywords": ["GA4 conversions", "GA4 vs Google Ads", "conversion discrepancy", "attribution difference", "conversion mismatch"],
+    "category": "ga4",
+    "question": "Why do GA4 and Google Ads show different conversion numbers?",
+    "answer": "The mismatch happens because **GA4 uses data-driven attribution** across all channels while Google Ads credits only ad interactions. GA4 uses session-based counting by default (one conversion per session) vs Google Ads' click-based counting. Different lookback windows and cross-device tracking methods also cause gaps. Use both — Google Ads for campaign optimization, GA4 for the full picture.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ga4-attribution-reports",
+    "keywords": ["GA4 attribution", "attribution reports", "data-driven attribution", "GA4 DDA", "attribution model"],
+    "category": "ga4",
+    "question": "How do I use GA4 attribution reports for ad optimization?",
+    "answer": "Go to Advertising > **Attribution** in GA4 to see how each channel contributes to conversions. The Model Comparison report lets you compare data-driven vs. last-click attribution — channels like YouTube and Display often get more credit under data-driven. Use Conversion Paths to see the typical journey length and optimize your funnel touchpoints.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ga4-predictive-audiences",
+    "keywords": ["predictive audiences", "GA4 predictions", "likely to purchase", "likely to churn", "predictive metrics"],
+    "category": "ga4",
+    "question": "How do GA4 predictive audiences work with Google Ads?",
+    "answer": "GA4 uses machine learning to create **predictive audiences** like \"Likely 7-day purchasers\" and \"Likely to churn.\" You need at least 1,000 positive and 1,000 negative examples in 28 days for predictions to activate. Import these audiences to Google Ads for high-intent targeting or create lookalikes. They're especially powerful for re-engagement campaigns.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ga4-exploration-ads",
+    "keywords": ["GA4 explorations", "exploration reports", "funnel exploration", "GA4 analysis", "custom reports GA4"],
+    "category": "ga4",
+    "question": "How can I use GA4 exploration reports to improve ad performance?",
+    "answer": "Use **Funnel Exploration** to see where ad traffic drops off in your conversion funnel — if 80% drop at checkout, fix the page, not the ad. Segment explorations by traffic source to compare ad campaign behavior. The Free Form exploration lets you build custom tables combining dimensions like campaign, device, and landing page with conversion metrics.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ga4-path-analysis",
+    "keywords": ["path analysis", "GA4 path", "user journey", "touchpoint analysis", "conversion path"],
+    "category": "ga4",
+    "question": "How do I use GA4 path analysis for ad optimization?",
+    "answer": "In Explorations, choose **Path Exploration** and set your starting point as a Google Ads landing page. See where users go next — if they consistently visit a FAQ page before converting, surface that info in your ad copy. Reverse paths from conversions to understand which page sequences lead to purchases and optimize your site flow accordingly.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ga4-cohort-analysis",
+    "keywords": ["cohort analysis", "GA4 cohorts", "retention analysis", "user retention", "cohort report"],
+    "category": "ga4",
+    "question": "How does GA4 cohort analysis help with ad strategy?",
+    "answer": "**Cohort analysis** groups users by acquisition date and tracks their behavior over time. Compare cohorts from different campaigns to see which ad source brings users with the highest Day 7 or Day 30 return rates. If a campaign drives lots of first visits but zero retention, its true value is lower than CPA suggests.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ga4-linking",
+    "keywords": ["link GA4 Google Ads", "connect analytics ads", "GA4 setup", "GA4 integration", "linking accounts"],
+    "category": "ga4",
+    "question": "How do I link GA4 to Google Ads step by step?",
+    "answer": "In GA4, go to Admin > Product Links > **Google Ads Links** > Link. Select your Google Ads account, enable auto-tagging, and turn on Ads Personalization. In Google Ads, go to Tools > Linked Accounts to verify. Once linked, GA4 audiences and conversions become available in Google Ads within 24-48 hours. You need edit access in both platforms.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ga4-custom-dimensions",
+    "keywords": ["custom dimensions", "GA4 custom dimensions", "custom metrics", "GA4 parameters", "event parameters"],
+    "category": "ga4",
+    "question": "How can GA4 custom dimensions improve ad performance insights?",
+    "answer": "Create **custom dimensions** in GA4 from event parameters you send (e.g., product_category, user_type, plan_tier). Then in Explorations, break down ad performance by these dimensions to find which product categories or user types your ads convert best. This granularity helps you build more targeted campaigns and allocate budget to what actually works.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-saas",
+    "keywords": ["SaaS Google Ads", "software ads", "B2B SaaS", "SaaS marketing", "trial signups"],
+    "category": "industry",
+    "question": "What's the best Google Ads strategy for SaaS companies?",
+    "answer": "Focus on **high-intent search keywords** like \"[category] software\" and competitor brand terms. Track free trial signups as primary conversions, but import closed-deal data from your CRM for offline conversion tracking. Use long-tail keywords — SaaS CPCs are high, so specificity lowers waste. Budget 70% Search, 20% remarketing, 10% YouTube for awareness.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-real-estate",
+    "keywords": ["real estate ads", "realtor advertising", "property ads", "real estate Google Ads"],
+    "category": "industry",
+    "question": "How should real estate agents use Google Ads?",
+    "answer": "Target **hyper-local keywords** like \"homes for sale in [neighborhood]\" and use location targeting with a tight radius. Lead form extensions work well for capturing buyer inquiries. Create separate campaigns for buyers vs. sellers — the messaging and keywords are completely different. Use call extensions during business hours for immediate lead capture.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-healthcare",
+    "keywords": ["healthcare ads", "medical ads", "doctor advertising", "healthcare Google Ads", "HIPAA ads"],
+    "category": "industry",
+    "question": "What should healthcare providers know about Google Ads?",
+    "answer": "Healthcare ads face strict **Google Ads policies** — no remarketing for health conditions, restrictions on pharmaceuticals, and certification requirements for some services. Focus on symptom-based and service-based keywords. Don't use personalized advertising for sensitive health categories. Ensure your landing page has proper credentials, privacy policy, and doesn't make prohibited medical claims.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-restaurants",
+    "keywords": ["restaurant ads", "food delivery ads", "restaurant Google Ads", "local restaurant marketing"],
+    "category": "industry",
+    "question": "How should restaurants use Google Ads effectively?",
+    "answer": "Use **local campaigns and Google Maps ads** to reach hungry customers nearby. Bid higher during lunch (11am-1pm) and dinner (5pm-8pm) with ad schedule adjustments. Call extensions and location assets are essential for driving foot traffic. Keep budgets modest ($20-50/day) and focus on high-intent terms like \"[cuisine] restaurant near me.\"",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-travel",
+    "keywords": ["travel ads", "tourism ads", "hotel advertising", "travel Google Ads", "destination marketing"],
+    "category": "industry",
+    "question": "What's the best Google Ads approach for travel and tourism?",
+    "answer": "Target the **full booking funnel**: awareness (\"best vacation spots\"), research (\"things to do in [destination]\"), and booking (\"[hotel] deals\"). Use countdown customizers for seasonal offers and promotion extensions for early-bird discounts. Video campaigns on YouTube perform well for inspiring travel. Adjust bids seasonally — travel demand fluctuates dramatically by month.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-education",
+    "keywords": ["education ads", "online courses", "university ads", "edtech", "education Google Ads"],
+    "category": "industry",
+    "question": "How should education companies use Google Ads?",
+    "answer": "Target **program-specific keywords** (\"online MBA,\" \"coding bootcamp\") rather than broad terms. Lead form extensions capture prospective students efficiently. Use remarketing aggressively — education decisions have long consideration cycles (30-90 days). Import enrollment data as offline conversions so Google optimizes for students who actually enroll, not just form fills.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-automotive",
+    "keywords": ["automotive ads", "car dealer ads", "auto dealer Google Ads", "vehicle ads", "car dealership"],
+    "category": "industry",
+    "question": "How should automotive dealers run Google Ads?",
+    "answer": "Use **Vehicle Listing Ads** through Merchant Center to show inventory with images and prices in Search results. Create campaigns by make/model and separate new vs. used inventory. Target high-intent terms like \"[make model] for sale near me.\" Location extensions and call extensions are critical since most car buyers want to visit a dealership.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-home-services",
+    "keywords": ["home services ads", "plumber ads", "electrician ads", "HVAC ads", "contractor Google Ads"],
+    "category": "industry",
+    "question": "How should home service companies use Google Ads?",
+    "answer": "Consider **Local Services Ads** (pay-per-lead, Google Guaranteed badge) alongside standard Search campaigns. Target emergency keywords (\"emergency plumber near me\") with higher bids and 24/7 scheduling. Call-only ads work extremely well since most homeowners want to call immediately. Track calls as conversions with a 60-second minimum duration.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-legal",
+    "keywords": ["legal ads", "lawyer ads", "attorney Google Ads", "law firm advertising", "legal marketing"],
+    "category": "industry",
+    "question": "What's the best Google Ads strategy for law firms?",
+    "answer": "Legal CPCs are among the highest ($50-200+ for terms like \"personal injury lawyer\"), so **conversion tracking is non-negotiable**. Focus on case-type keywords with location modifiers. Use call tracking with longer duration thresholds (2+ minutes = qualified lead). Negative keyword lists are critical — exclude DIY, free, and informational queries aggressively.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-financial",
+    "keywords": ["financial ads", "fintech ads", "bank advertising", "financial services Google Ads", "insurance ads"],
+    "category": "industry",
+    "question": "How should financial services companies approach Google Ads?",
+    "answer": "Financial ads require **Google certification** for many products (loans, credit cards, insurance). Policy restrictions are strict — no misleading claims about returns or guaranteed rates. Focus on comparison and intent keywords. Use offline conversion imports to optimize for approved loans or opened accounts, not just applications. Remarketing restrictions apply to some financial products.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-ecommerce-fashion",
+    "keywords": ["fashion ads", "clothing ads", "ecommerce fashion", "apparel Google Ads", "fashion ecommerce"],
+    "category": "industry",
+    "question": "How should fashion e-commerce brands use Google Ads?",
+    "answer": "**Shopping campaigns and PMax** are your bread and butter — invest heavily in feed optimization with high-quality images, detailed titles, and GTINs. Use custom labels to segment by margin, season, or best-sellers. Run dynamic remarketing to show the exact products shoppers viewed. Performance Max with lifestyle imagery in asset groups drives discovery-stage traffic.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-mobile-apps",
+    "keywords": ["app ads", "mobile game ads", "app install campaigns", "app marketing", "mobile app Google Ads"],
+    "category": "industry",
+    "question": "How should mobile app and game companies use Google Ads?",
+    "answer": "Run **App campaigns** — Google automatically serves across Search, Play Store, YouTube, AdMob, and Discover. For games, optimize for in-app purchases (not just installs) to attract high-value players. Provide diverse creative assets: gameplay video, screenshots, and multiple text variations. Use Firebase events as conversion actions to optimize for post-install engagement.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "auto-rules-cookbook",
+    "keywords": ["automated rules", "automation rules", "Google Ads rules", "auto rules", "rule recipes"],
+    "category": "automation",
+    "question": "What are the most useful Google Ads automated rules?",
+    "answer": "Set up rules to **pause keywords** with spend > $50 and zero conversions (daily check), increase budgets on campaigns hitting daily cap before 3pm, enable/disable seasonal campaigns on specific dates, and alert when CPA exceeds target by 20%. Go to Tools > Bulk Actions > Rules. Start with email-only notifications before enabling auto-actions.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "auto-scripts-budget",
+    "keywords": ["budget scripts", "Google Ads scripts", "budget management script", "automated budgets"],
+    "category": "automation",
+    "question": "How can I use Google Ads scripts for budget management?",
+    "answer": "**Google Ads scripts** (JavaScript-based) can dynamically adjust budgets based on performance, time of month, or pacing. Common scripts include: monthly budget pacing (spend evenly or accelerate toward month-end), pausing campaigns that hit a spending cap, and reallocating budget from underperformers to top performers. Find starter scripts at developers.google.com/google-ads/scripts.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "auto-scripts-bidding",
+    "keywords": ["bid scripts", "bid management scripts", "automated bidding scripts", "bid automation"],
+    "category": "automation",
+    "question": "How do Google Ads scripts help with bid management?",
+    "answer": "While Smart Bidding handles most bid optimization, scripts are useful for **manual bidding scenarios** like adjusting bids based on weather, inventory levels, or external data feeds. Scripts can also monitor Smart Bidding performance and alert you when CPA or ROAS drifts beyond acceptable thresholds. They run up to hourly — check the scripts dashboard for execution logs.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "auto-scripts-quality-score",
+    "keywords": ["quality score tracking", "QS script", "quality score monitor", "quality score history"],
+    "category": "automation",
+    "question": "How do I track Quality Score changes automatically?",
+    "answer": "Use a **Quality Score tracking script** that logs daily QS, expected CTR, ad relevance, and landing page experience to a Google Sheet. Since Google doesn't provide QS history natively, this script creates a historical record you can chart over time. Monitor drops to catch issues early — a QS decline often signals a landing page problem or increased competition.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "auto-scripts-competitive",
+    "keywords": ["competitive monitoring", "auction insights script", "competitor tracking", "competitive analysis automation"],
+    "category": "automation",
+    "question": "How can I automate competitive monitoring in Google Ads?",
+    "answer": "Write a script to pull **Auction Insights** data daily and log it to a Google Sheet — track impression share, overlap rate, and position above rate for key competitors. Set up email alerts when a new competitor enters your auctions or when your impression share drops below a threshold. This historical data reveals competitor bidding patterns over time.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "auto-looker-studio",
+    "keywords": ["Looker Studio", "Data Studio", "automated reporting", "Google Ads reporting", "dashboard reporting"],
+    "category": "automation",
+    "question": "How do I set up automated reporting with Looker Studio?",
+    "answer": "Connect Google Ads as a data source in **Looker Studio** (formerly Data Studio), then build dashboards with scorecards, charts, and tables. Schedule email delivery (daily, weekly, monthly) to stakeholders as PDFs. Use blended data sources to combine Google Ads with GA4 or Google Sheets for unified reporting. Templates are available in the Looker Studio gallery.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "auto-api-batch",
+    "keywords": ["Google Ads API", "batch operations", "API automation", "bulk changes", "API management"],
+    "category": "automation",
+    "question": "When should I use Google Ads API batch operations?",
+    "answer": "Use the **Google Ads API** for large-scale changes that exceed what the UI or scripts can handle — like managing thousands of keywords, syncing product feeds, or building custom bidding logic from external data. Batch operations let you group multiple mutations into a single request, reducing API quota usage. Python and Java client libraries make integration straightforward.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "auto-mcc-automation",
+    "keywords": ["MCC automation", "manager account scripts", "cross-account management", "MCC scripts", "multi-account"],
+    "category": "automation",
+    "question": "How do I automate management across multiple Google Ads accounts?",
+    "answer": "Use **MCC-level scripts** to run the same automation across all child accounts — budget monitoring, performance alerts, and reporting scale beautifully this way. The Google Ads API also supports MCC-level operations for bulk account management. Create standardized naming conventions and label systems so your automations can identify and act on campaigns consistently across accounts.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
   }
 ]
