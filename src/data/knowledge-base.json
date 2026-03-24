@@ -4946,5 +4946,109 @@
         "url": "/google-mindful-solution-architect/projects/google-ads/"
       }
     ]
+  },
+  {
+    "id": "hc-location-extensions",
+    "keywords": ["location extensions", "location assets", "Google Business Profile", "maps ads", "store location"],
+    "category": "help-center",
+    "question": "How do I set up location extensions in Google Ads?",
+    "answer": "Link your **Google Business Profile** to Google Ads under Tools > Linked Accounts. Location assets then automatically show your address, map pin, and distance in search ads. They're essential for driving foot traffic — ads with location extensions see up to 10% higher CTR. Ensure your Business Profile hours and info are always accurate.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-audience-manager",
+    "keywords": ["audience manager", "custom audiences", "combined audiences", "audience lists", "remarketing lists"],
+    "category": "help-center",
+    "question": "How do I use the Audience Manager in Google Ads?",
+    "answer": "Go to Tools > **Audience Manager** to create and manage all your audience segments. Build custom segments from search terms, URLs, and apps your ideal customers use. Use combined segments to layer AND/OR logic (e.g., visited pricing page AND in-market for software). Upload customer lists here for Customer Match targeting and lookalike expansion.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "yt-connected-tv",
+    "keywords": ["connected TV", "CTV ads", "YouTube TV ads", "streaming ads", "big screen ads"],
+    "category": "youtube",
+    "question": "How do YouTube ads work on connected TVs?",
+    "answer": "YouTube is the #1 ad-supported streaming platform on **connected TVs** (smart TVs, Roku, Fire TV, etc.). CTV ads are non-skippable 15-30 second spots that reach cord-cutters during lean-back viewing. Target CTV specifically through device targeting in Video campaigns. CPMs are higher than mobile but engagement and completion rates are significantly better.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ga4-consent-mode",
+    "keywords": ["consent mode", "GA4 consent", "privacy", "GDPR ads", "cookie consent"],
+    "category": "ga4",
+    "question": "How does GA4 Consent Mode affect Google Ads performance?",
+    "answer": "**Consent Mode** adjusts how Google tags behave when users decline cookies — it models conversions from unconsented users using machine learning. Without it, you lose conversion data in privacy-regulated markets (EU, UK). Implement Consent Mode v2 with your CMP (cookie banner) to maintain accurate bidding signals while staying compliant with GDPR and DMA regulations.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "pmax-asset-reporting",
+    "keywords": ["PMax asset reporting", "asset performance", "creative reporting", "asset labels", "PMax creative"],
+    "category": "pmax",
+    "question": "How do I read PMax asset performance reports?",
+    "answer": "Go to your asset group and click **Asset Details** to see each asset rated as Best, Good, or Low. Replace Low-performing assets regularly but give new ones 2-3 weeks before judging. Use the Combinations report to see which headline + image + description combos Google serves most. Unfortunately, per-channel creative reporting is still limited in PMax.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "ind-b2b",
+    "keywords": ["B2B ads", "B2B Google Ads", "business to business", "B2B marketing", "B2B lead gen"],
+    "category": "industry",
+    "question": "What's the best Google Ads strategy for B2B companies?",
+    "answer": "Target **high-intent, solution-aware keywords** (\"enterprise CRM software,\" \"warehouse management system\") and gate your content behind lead forms. B2B sales cycles are long, so remarketing is critical — use RLSA to bid higher when known prospects search again. Import CRM pipeline data as offline conversions so Google optimizes for deals, not just MQLs.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "auto-scripts-alerts",
+    "keywords": ["Google Ads alerts", "performance alerts", "anomaly detection", "budget alerts", "automated notifications"],
+    "category": "automation",
+    "question": "How do I set up automated performance alerts in Google Ads?",
+    "answer": "Create **automated rules** for basic alerts (CPA spike, budget depletion, disapproved ads) under Tools > Bulk Actions > Rules. For advanced alerting, use Google Ads scripts that check metrics hourly and send email/Slack notifications when anomalies occur. Monitor for sudden CTR drops (ad fatigue), conversion tracking failures (zero conversions), and overspend patterns.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "hc-conversion-value-rules",
+    "keywords": ["conversion value rules", "value-based bidding", "conversion values", "value rules", "ROAS optimization"],
+    "category": "help-center",
+    "question": "How do conversion value rules work in Google Ads?",
+    "answer": "**Conversion value rules** let you adjust reported conversion values based on audience, location, or device without changing your website tracking. For example, assign 2x value to high-income zip codes or returning customers. This tells Smart Bidding to bid more aggressively for higher-value segments. They're essential for value-based bidding strategies like Target ROAS.",
+    "links": [
+      {
+        "text": "Google Ads Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
   }
 ]
