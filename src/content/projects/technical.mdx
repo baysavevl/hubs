@@ -1,0 +1,908 @@
+---
+title: "Google Ads Technical Guide"
+description: "Technical setup, configuration, API integration, scripts, GTM, server-side tagging, BigQuery, and automation for Google Ads."
+pubDate: 2025-01-15
+featured: true
+category: "technical"
+---
+
+<div class="guide-hero">
+  <h1>Google Ads Technical Guide</h1>
+  <p>Deep-dive into technical setup, API integration, tracking, scripts, and data infrastructure for Google Ads.</p>
+  <div class="badge-row">
+    <span class="badge">Technical Guide</span>
+    <span class="badge">45 min read</span>
+    <span class="badge">For Developers & Technical Marketers</span>
+  </div>
+</div>
+
+<div class="google-bar"><span></span><span></span><span></span><span></span></div>
+
+## Account & Campaign Setup
+
+### MCC Hierarchy Best Practices
+
+A My Client Center (MCC) account is the backbone of any multi-account Google Ads operation. Structure your MCC hierarchy to mirror your business or client organization.
+
+**Recommended hierarchy for agencies:**
+
+```
+Root MCC (Agency Level)
+├── Sub-MCC: Client A
+│   ├── Client A - Search
+│   ├── Client A - Shopping
+│   └── Client A - Display/Video
+├── Sub-MCC: Client B
+│   ├── Client B - Search
+│   └── Client B - PMax
+└── Sub-MCC: Internal Accounts
+    └── Agency - Internal Testing
+```
+
+**Key rules:**
+- Each individual Google Ads account can be linked to at most **5 MCC accounts**
+- Use sub-MCCs to group accounts by client, region, or business unit
+- Apply shared budgets and negative keyword lists at the MCC level where possible
+- Assign user access at the MCC level to cascade permissions downward
+
+### Campaign Naming Conventions
+
+Consistent naming is critical for reporting, filtering, and script automation. Use a delimited naming schema:
+
+```
+[Network]_[Country]_[CampaignType]_[Targeting]_[Goal]
+
+Examples:
+SEARCH_US_Brand_Exact_Leads
+SEARCH_UK_Generic_Broad_Sales
+SHOPPING_US_PMax_AllProducts_Revenue
+DISPLAY_US_Remarketing_30Day_Awareness
+VIDEO_US_YouTube_InStream_Consideration
+```
+
+| Segment       | Values                                              |
+|---------------|-----------------------------------------------------|
+| Network       | SEARCH, SHOPPING, DISPLAY, VIDEO, PMAX, DEMAND_GEN  |
+| Country       | US, UK, DE, FR, AU, GLOBAL                           |
+| CampaignType  | Brand, Generic, Competitor, Remarketing, PMax        |
+| Targeting     | Exact, Phrase, Broad, Audience, AllProducts           |
+| Goal          | Leads, Sales, Revenue, Awareness, Consideration      |
+
+### Automated Rules Setup
+
+Automated rules let you schedule changes without scripts or the API. Configure them under **Tools > Bulk Actions > Rules**.
+
+Common automated rules:
+
+- **Pause low-performing keywords**: If cost > $50 and conversions = 0 over 30 days, pause the keyword
+- **Increase bids on top performers**: If conversion rate > 5% and avg. position > 3, increase bid by 15%
+- **Budget pacing alerts**: Email notification if daily spend exceeds 120% of the daily budget
+- **Enable/disable campaigns on schedule**: Activate promotional campaigns on specific dates
+
+### Change History and Audit Logging
+
+Every change in Google Ads is logged in **Change History** (Tools > Change History). For programmatic access, use the `ChangeEvent` resource via the Google Ads API:
+
+```python
+query = """
+    SELECT
+      change_event.change_date_time,
+      change_event.change_resource_type,
+      change_event.user_email,
+      change_event.old_resource,
+      change_event.new_resource
+    FROM change_event
+    WHERE change_event.change_date_time >= '2025-01-01'
+    ORDER BY change_event.change_date_time DESC
+    LIMIT 100
+"""
+response = ga_service.search_stream(customer_id=customer_id, query=query)
+```
+
+---
+
+## Conversion Tracking
+
+### Google Ads Conversion Tag Setup
+
+The Global Site Tag (gtag.js) is the foundation for conversion tracking. Install it on every page of your site:
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-XXXXXXXXX');
+</script>
+```
+
+Fire the conversion event on your thank-you or confirmation page:
+
+```html
+<script>
+  gtag('event', 'conversion', {
+    'send_to': 'AW-XXXXXXXXX/AbC1DeFgHiJkLmNoPq',
+    'value': 49.99,
+    'currency': 'USD',
+    'transaction_id': 'ORDER-12345'
+  });
+</script>
+```
+
+<div class="callout callout-tip">
+  <span class="callout-icon">Important</span>
+  <div>
+    <p>Always pass a unique <code>transaction_id</code> to prevent duplicate conversions. Google Ads will automatically deduplicate events sharing the same transaction ID within a 7-day window.</p>
+  </div>
+</div>
+
+### Google Tag Manager (GTM) Configuration
+
+For teams preferring a tag management approach:
+
+1. **Create a Conversion Linker tag** -- trigger it on All Pages. This tag ensures click IDs (gclid) are stored in first-party cookies.
+2. **Create a Google Ads Conversion Tracking tag** with your Conversion ID and Conversion Label.
+3. **Set the trigger** to fire on your conversion event (e.g., a custom event pushed to the dataLayer).
+
+DataLayer push example for a form submission:
+
+```javascript
+document.getElementById('lead-form').addEventListener('submit', function() {
+  window.dataLayer.push({
+    'event': 'generate_lead',
+    'conversionValue': 150,
+    'currency': 'USD',
+    'transactionId': 'LEAD-' + Date.now()
+  });
+});
+```
+
+### Enhanced Conversions Setup
+
+Enhanced conversions improve measurement accuracy by sending hashed first-party customer data (email, phone, address) alongside your conversion tag. Google matches this data against signed-in Google accounts.
+
+**Implementation via gtag.js:**
+
+```html
+<script>
+  gtag('set', 'user_data', {
+    'sha256_email_address': hashEmail(userEmail),
+    'sha256_phone_number': hashPhone(userPhone),
+    'address': {
+      'sha256_first_name': hashValue(firstName),
+      'sha256_last_name': hashValue(lastName),
+      'street': '123 Main St',
+      'city': 'New York',
+      'region': 'NY',
+      'postal_code': '10001',
+      'country': 'US'
+    }
+  });
+</script>
+```
+
+**Implementation via GTM:**
+- Use the **Google Ads Conversion Tracking** tag
+- Check "Include user-provided data from your website"
+- Map user data fields from dataLayer variables or CSS selectors
+
+### Server-Side Tagging with GTM
+
+Server-side GTM moves tag execution from the user's browser to a server container you control. Benefits include improved page speed, better data control, and resilience against ad blockers.
+
+**Architecture:**
+
+```
+User's Browser
+  └── Sends data to your first-party endpoint
+        └── Cloud Run / App Engine (GTM Server Container)
+              ├── Google Ads Conversion Tag (server-side)
+              ├── GA4 Tag (server-side)
+              └── Facebook CAPI Tag (server-side)
+```
+
+**Setup steps:**
+
+1. Create a **Server container** in GTM (tagmanager.google.com)
+2. Deploy the container to **Google Cloud Run** (recommended) or App Engine
+3. Configure a custom domain (e.g., `sgtm.yourdomain.com`) pointing to your server container
+4. In your web GTM container, change the `transport_url` to your server-side endpoint:
+
+```javascript
+gtag('config', 'AW-XXXXXXXXX', {
+  'server_container_url': 'https://sgtm.yourdomain.com'
+});
+```
+
+5. In the server container, create **Client** tags to parse incoming requests and **Tag** templates to forward data to Google Ads, GA4, etc.
+
+### Consent Mode v2 Implementation
+
+Consent Mode v2 is required for advertising in the EEA. It adjusts tag behavior based on user consent status.
+
+```html
+<script>
+  // Set default consent state BEFORE loading gtag.js
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+
+<!-- Load gtag.js after setting defaults -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'AW-XXXXXXXXX');
+</script>
+```
+
+When the user provides consent via your CMP (Consent Management Platform), update the consent state:
+
+```javascript
+// Called when user accepts cookies
+function onConsentGranted() {
+  gtag('consent', 'update', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+}
+```
+
+| Consent Signal       | Controls                                           |
+|----------------------|-----------------------------------------------------|
+| `ad_storage`         | Cookies used for advertising (e.g., gclid cookie)   |
+| `ad_user_data`       | Sending user data to Google for advertising          |
+| `ad_personalization` | Remarketing and personalized advertising             |
+| `analytics_storage`  | Cookies used for analytics (e.g., _ga cookie)        |
+
+### Offline Conversion Imports
+
+Upload offline conversion data (CRM sales, phone orders) to Google Ads to close the loop between online clicks and offline outcomes.
+
+**Requirements:**
+- Capture the `gclid` (Google Click ID) from the landing page URL when a user clicks your ad
+- Store it in your CRM alongside the lead record
+- Upload conversions via the API or UI within 90 days of the click
+
+**API upload example (Python):**
+
+```python
+from google.ads.googleads.client import GoogleAdsClient
+
+client = GoogleAdsClient.load_from_storage("google-ads.yaml")
+
+conversion_action_service = client.get_service("ConversionUploadService")
+
+click_conversion = client.get_type("ClickConversion")
+click_conversion.gclid = "EAIaIQobChMI..."
+click_conversion.conversion_action = (
+    f"customers/{customer_id}/conversionActions/{conversion_action_id}"
+)
+click_conversion.conversion_date_time = "2025-01-10 14:30:00+00:00"
+click_conversion.conversion_value = 500.0
+click_conversion.currency_code = "USD"
+
+response = conversion_action_service.upload_click_conversions(
+    customer_id=customer_id,
+    conversions=[click_conversion],
+    partial_failure=True,
+)
+```
+
+### Phone Call Tracking
+
+Google Ads offers three call tracking methods:
+
+1. **Call extensions / call assets**: Add a phone number to your ad; Google provides a forwarding number
+2. **Call-only ads**: Ads designed solely to drive phone calls
+3. **Website call conversions**: Use a JavaScript snippet to dynamically swap your phone number on the site with a Google forwarding number
+
+Website call conversion snippet:
+
+```html
+<script>
+  gtag('config', 'AW-XXXXXXXXX/AbCdEf', {
+    'phone_conversion_number': '+1-555-123-4567'
+  });
+</script>
+```
+
+---
+
+## Google Ads Scripts
+
+### Introduction to Google Ads Scripts
+
+Google Ads Scripts use JavaScript (based on Apps Script) to automate actions within Google Ads. Access them under **Tools > Bulk Actions > Scripts**.
+
+Key capabilities:
+- Read and modify campaigns, ad groups, keywords, ads
+- Generate and email custom reports
+- Integrate with external APIs and Google Sheets
+- Run on schedules (hourly, daily, weekly, monthly)
+
+### Common Script Examples
+
+**Budget monitoring with email alerts:**
+
+```javascript
+function main() {
+  var campaigns = AdsApp.campaigns()
+    .withCondition("Status = ENABLED")
+    .get();
+
+  var alertLines = [];
+
+  while (campaigns.hasNext()) {
+    var campaign = campaigns.next();
+    var stats = campaign.getStatsFor("TODAY");
+    var budget = campaign.getBudget().getAmount();
+    var spend = stats.getCost();
+    var pacing = (spend / budget) * 100;
+
+    if (pacing > 90) {
+      alertLines.push(
+        campaign.getName() + ": " + pacing.toFixed(1) + "% of daily budget spent"
+      );
+    }
+  }
+
+  if (alertLines.length > 0) {
+    MailApp.sendEmail(
+      "alerts@yourcompany.com",
+      "Google Ads Budget Alert",
+      "The following campaigns are nearing their daily budget:\n\n" +
+        alertLines.join("\n")
+    );
+  }
+}
+```
+
+**Automated bid management based on ROAS:**
+
+```javascript
+function main() {
+  var keywords = AdsApp.keywords()
+    .withCondition("Status = ENABLED")
+    .withCondition("Impressions > 100")
+    .forDateRange("LAST_30_DAYS")
+    .get();
+
+  while (keywords.hasNext()) {
+    var keyword = keywords.next();
+    var stats = keyword.getStatsFor("LAST_30_DAYS");
+    var cost = stats.getCost();
+    var convValue = stats.getConversionValue();
+
+    if (cost === 0) continue;
+
+    var roas = convValue / cost;
+    var currentBid = keyword.bidding().getCpc();
+
+    if (roas > 5) {
+      // High ROAS: increase bid by 10%
+      keyword.bidding().setCpc(currentBid * 1.10);
+    } else if (roas < 1 && cost > 50) {
+      // Negative ROAS with significant spend: decrease bid by 20%
+      keyword.bidding().setCpc(currentBid * 0.80);
+    }
+  }
+}
+```
+
+**Exporting search term reports to Google Sheets:**
+
+```javascript
+function main() {
+  var spreadsheet = SpreadsheetApp.openByUrl(
+    "https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID"
+  );
+  var sheet = spreadsheet.getActiveSheet();
+  sheet.clear();
+  sheet.appendRow(["Search Term", "Clicks", "Impressions", "Cost", "Conversions"]);
+
+  var report = AdsApp.report(
+    "SELECT search_term_view.search_term, metrics.clicks, " +
+    "metrics.impressions, metrics.cost_micros, metrics.conversions " +
+    "FROM search_term_view " +
+    "WHERE segments.date DURING LAST_7_DAYS " +
+    "ORDER BY metrics.clicks DESC"
+  );
+
+  var rows = report.rows();
+  while (rows.hasNext()) {
+    var row = rows.next();
+    sheet.appendRow([
+      row["search_term_view.search_term"],
+      row["metrics.clicks"],
+      row["metrics.impressions"],
+      (row["metrics.cost_micros"] / 1000000).toFixed(2),
+      row["metrics.conversions"]
+    ]);
+  }
+}
+```
+
+### MCC-Level Scripts
+
+MCC scripts iterate across all child accounts:
+
+```javascript
+function main() {
+  var accounts = AdsManagerApp.accounts()
+    .withCondition("Impressions > 0")
+    .forDateRange("LAST_7_DAYS")
+    .get();
+
+  accounts.executeInParallel("processAccount", "afterProcessing");
+}
+
+function processAccount() {
+  var account = AdsApp.currentAccount();
+  var stats = account.getStatsFor("LAST_7_DAYS");
+  return JSON.stringify({
+    name: account.getName(),
+    id: account.getCustomerId(),
+    cost: stats.getCost(),
+    conversions: stats.getConversions()
+  });
+}
+
+function afterProcessing(results) {
+  var output = [];
+  for (var i = 0; i < results.length; i++) {
+    if (results[i].getStatus() === "OK") {
+      output.push(JSON.parse(results[i].getReturnValue()));
+    }
+  }
+  Logger.log(JSON.stringify(output, null, 2));
+}
+```
+
+### Script Best Practices and Limitations
+
+| Limitation                        | Detail                                |
+|-----------------------------------|---------------------------------------|
+| Execution time limit              | 30 minutes per run                    |
+| MCC parallel execution            | Up to 50 accounts simultaneously      |
+| API calls per run                 | Subject to standard rate limits        |
+| External URL fetch                | Allowed via `UrlFetchApp`             |
+| Cannot modify                     | Smart Bidding strategies, PMax assets |
+
+Best practices:
+- Use `executeInParallel` for MCC scripts to avoid timeouts
+- Batch operations where possible instead of making changes one at a time
+- Log extensively and email error reports
+- Version control your scripts externally (e.g., in a Git repository)
+- Test in a preview/dry-run mode before enabling writes
+
+---
+
+## Google Ads API
+
+### API Overview and Authentication
+
+The Google Ads API (v17+) replaces the deprecated AdWords API. It uses gRPC and REST, with OAuth 2.0 for authentication.
+
+**Authentication flow:**
+
+1. Create a project in Google Cloud Console
+2. Enable the Google Ads API
+3. Create OAuth 2.0 credentials (Desktop app or Web app)
+4. Obtain a developer token from your MCC account (Tools > API Center)
+5. Generate a refresh token using the OAuth flow
+
+**Configuration file (`google-ads.yaml`):**
+
+```yaml
+developer_token: "YOUR_DEVELOPER_TOKEN"
+client_id: "YOUR_CLIENT_ID.apps.googleusercontent.com"
+client_secret: "YOUR_CLIENT_SECRET"
+refresh_token: "YOUR_REFRESH_TOKEN"
+login_customer_id: "1234567890"  # MCC account ID
+```
+
+**Python client initialization:**
+
+```python
+from google.ads.googleads.client import GoogleAdsClient
+
+client = GoogleAdsClient.load_from_storage("google-ads.yaml")
+
+ga_service = client.get_service("GoogleAdsService")
+
+query = """
+    SELECT
+      campaign.id,
+      campaign.name,
+      metrics.impressions,
+      metrics.clicks,
+      metrics.cost_micros,
+      metrics.conversions
+    FROM campaign
+    WHERE segments.date DURING LAST_30_DAYS
+    ORDER BY metrics.cost_micros DESC
+"""
+
+response = ga_service.search_stream(
+    customer_id="1234567890",
+    query=query
+)
+
+for batch in response:
+    for row in batch.results:
+        print(f"{row.campaign.name}: "
+              f"{row.metrics.clicks} clicks, "
+              f"${row.metrics.cost_micros / 1_000_000:.2f} cost, "
+              f"{row.metrics.conversions:.1f} conversions")
+```
+
+### Common API Use Cases
+
+- **Bulk keyword operations**: Add, update, or remove thousands of keywords in a single mutate request
+- **Custom reporting**: Pull data from any resource (campaigns, ad groups, keywords, search terms) with arbitrary date ranges and filters using GAQL (Google Ads Query Language)
+- **Automated campaign management**: Create campaigns, set budgets, and adjust bids programmatically
+- **Audience management**: Upload Customer Match lists, create remarketing audiences
+- **Feed management**: Manage product feeds and feed items for Shopping campaigns
+
+### Client Libraries
+
+| Language | Package                                     | Install Command                                       |
+|----------|----------------------------------------------|-------------------------------------------------------|
+| Python   | `google-ads`                                 | `pip install google-ads`                               |
+| Java     | `google-ads-java`                            | Maven/Gradle dependency                                |
+| PHP      | `google-ads-php`                             | `composer require googleads/google-ads-php`             |
+| Ruby     | `google-ads-googleads`                       | `gem install google-ads-googleads`                      |
+| .NET     | `Google.Ads.GoogleAds`                       | `dotnet add package Google.Ads.GoogleAds`               |
+
+### Rate Limits and Best Practices
+
+- **Basic access**: 15,000 operations/day, 1,000 requests/day for most services
+- **Standard access**: Higher limits after application review
+- **Use `search_stream`** instead of `search` for large result sets (avoids pagination overhead)
+- **Batch mutate operations**: Combine up to 5,000 operations in a single `mutate` request
+- **Respect `RESOURCE_EXHAUSTED` errors**: Implement exponential backoff with jitter
+- **Cache metadata** (campaign IDs, conversion action IDs) to minimize read calls
+
+```python
+import time
+import random
+
+def api_call_with_backoff(func, max_retries=5):
+    for attempt in range(max_retries):
+        try:
+            return func()
+        except GoogleAdsException as ex:
+            for error in ex.failure.errors:
+                if error.error_code.quota_error:
+                    wait = (2 ** attempt) + random.uniform(0, 1)
+                    time.sleep(wait)
+                    continue
+            raise
+```
+
+---
+
+## Analytics & Reporting
+
+### GA4 + Google Ads Linking
+
+Linking GA4 to Google Ads unlocks bidirectional data sharing:
+
+- Import GA4 audiences into Google Ads for remarketing
+- Import GA4 conversions into Google Ads for bidding optimization
+- View Google Ads campaign data in GA4 reports
+
+**Steps:**
+1. In GA4, go to **Admin > Product Links > Google Ads Links**
+2. Select your Google Ads account
+3. Enable auto-tagging in Google Ads (Settings > Auto-tagging)
+4. Enable personalized advertising in the link settings
+5. In Google Ads, import GA4 conversions under **Tools > Conversions > Import**
+
+### BigQuery Exports from Google Ads
+
+Export Google Ads data to BigQuery for advanced analysis and joining with other data sources.
+
+**Option 1: Google Ads Data Transfer (BigQuery Data Transfer Service)**
+
+```sql
+-- Once configured, query your transferred data:
+SELECT
+  campaign_name,
+  SUM(metrics_clicks) AS total_clicks,
+  SUM(metrics_cost_micros) / 1000000 AS total_cost,
+  SUM(metrics_conversions) AS total_conversions,
+  SAFE_DIVIDE(SUM(metrics_conversions_value), SUM(metrics_cost_micros) / 1000000) AS roas
+FROM `project.dataset.ads_Campaign_XXXXXXX`
+WHERE _DATA_DATE BETWEEN '2025-01-01' AND '2025-01-31'
+GROUP BY campaign_name
+ORDER BY total_cost DESC;
+```
+
+**Option 2: API-to-BigQuery pipeline**
+
+Build a scheduled pipeline using Cloud Functions or Cloud Run that pulls data via the Google Ads API and loads it into BigQuery:
+
+```python
+from google.cloud import bigquery
+
+bq_client = bigquery.Client()
+table_ref = bq_client.dataset("google_ads").table("campaign_performance")
+
+rows_to_insert = []
+for batch in response:
+    for row in batch.results:
+        rows_to_insert.append({
+            "date": row.segments.date,
+            "campaign_id": row.campaign.id,
+            "campaign_name": row.campaign.name,
+            "clicks": row.metrics.clicks,
+            "cost": row.metrics.cost_micros / 1_000_000,
+            "conversions": row.metrics.conversions
+        })
+
+errors = bq_client.insert_rows_json(table_ref, rows_to_insert)
+if errors:
+    raise RuntimeError(f"BigQuery insert errors: {errors}")
+```
+
+### Looker Studio Dashboard Setup
+
+Connect Looker Studio (formerly Data Studio) directly to Google Ads:
+
+1. Create a new report at lookerstudio.google.com
+2. Add a **Google Ads** data source and authorize access
+3. Select the account and configure date range parameters
+4. Build dashboards using drag-and-drop charts, scorecards, and tables
+
+**Recommended dashboard sections:**
+- **Overview scorecard**: Spend, Clicks, Conversions, ROAS, CPA
+- **Campaign performance table**: Sortable by any metric with conditional formatting
+- **Trend charts**: Daily/weekly spend and conversion trends
+- **Device/location breakdown**: Segmented performance by device type and geography
+- **Search term analysis**: Top search terms by volume and conversion rate
+
+### Data-Driven Attribution Setup
+
+Data-driven attribution (DDA) uses machine learning to assign conversion credit across all touchpoints. To enable:
+
+1. Go to **Tools > Conversions** in Google Ads
+2. Select a conversion action and click **Edit settings**
+3. Under **Attribution model**, select **Data-driven**
+4. You need at least 300 conversions and 3,000 ad interactions in the past 30 days for DDA to be available
+
+---
+
+## Data Feeds & Merchant Center
+
+### Product Feed Specifications
+
+Your primary product feed is the foundation for Shopping and Performance Max campaigns. Google requires specific attributes:
+
+| Attribute              | Required | Description                                    |
+|------------------------|----------|------------------------------------------------|
+| `id`                   | Yes      | Unique product identifier                      |
+| `title`                | Yes      | Product name (max 150 characters)              |
+| `description`          | Yes      | Product description (max 5,000 characters)     |
+| `link`                 | Yes      | Landing page URL                               |
+| `image_link`           | Yes      | Main product image URL                         |
+| `availability`         | Yes      | `in_stock`, `out_of_stock`, `preorder`          |
+| `price`                | Yes      | Product price with currency (e.g., `29.99 USD`) |
+| `brand`                | Yes*     | Brand name (*required for most categories)      |
+| `gtin`                 | Yes*     | Global Trade Item Number (*when available)      |
+| `condition`            | Yes      | `new`, `refurbished`, `used`                    |
+| `google_product_category` | Recommended | Google's product taxonomy ID               |
+| `custom_label_0-4`     | Optional | Custom labels for campaign segmentation         |
+
+**Feed format example (TSV):**
+
+```
+id	title	description	link	image_link	availability	price	brand	gtin	condition
+SKU-001	Blue Running Shoes	Lightweight running shoes...	https://example.com/shoes/blue	https://example.com/img/blue.jpg	in_stock	89.99 USD	RunBrand	0123456789012	new
+```
+
+### Supplemental Feeds
+
+Supplemental feeds add or override attributes in your primary feed. Common uses:
+
+- Adding `custom_label` values for campaign segmentation
+- Overriding titles with optimized versions for ad relevance
+- Adding `sale_price` during promotional periods
+- Enriching data with `product_type` for internal categorization
+
+Link a supplemental feed in **Merchant Center > Products > Feeds > Supplemental feeds**, and match on the `id` attribute.
+
+### Feed Rules and Transformations
+
+Feed rules (Merchant Center > Products > Feeds > Rules) let you transform attribute values without modifying the source feed:
+
+- **Set to**: Override an attribute with a static or dynamic value
+- **Append**: Add text to the beginning or end of an attribute
+- **Extract**: Pull values from one attribute using regex patterns
+- **Mapping tables**: Convert source values to target values
+
+Example: Extracting brand from the title if missing:
+
+```
+Source attribute: title
+Regex: ^(\w+)\s
+Target attribute: brand
+```
+
+### Shopping Campaign Feed Optimization
+
+- **Title optimization**: Front-load the most important keywords (brand, product type, key attributes)
+- **Image quality**: Use clean, high-resolution images on white backgrounds; avoid watermarks
+- **Custom labels**: Use `custom_label_0` through `custom_label_4` to segment products by margin, seasonality, best-seller status, or price tier
+- **Negative keywords**: Add irrelevant search terms as negatives at the campaign or ad group level
+- **Product exclusions**: Exclude low-margin or out-of-stock products from campaigns
+
+---
+
+## Advanced Technical Topics
+
+### Google Ads Data Manager
+
+Google Ads Data Manager (Tools > Data Manager) simplifies first-party data connections. It provides pre-built connectors for:
+
+- CRM platforms (Salesforce, HubSpot)
+- CDPs (Segment, Tealium)
+- Cloud storage (BigQuery, Cloud Storage, SFTP)
+- Conversion platforms (Zapier, webhooks)
+
+Use Data Manager for ongoing, scheduled data imports rather than manual CSV uploads.
+
+### Customer Match Implementation
+
+Customer Match lets you target ads to your existing customers by uploading hashed contact information.
+
+**API implementation:**
+
+```python
+from google.ads.googleads.client import GoogleAdsClient
+
+client = GoogleAdsClient.load_from_storage("google-ads.yaml")
+
+offline_user_data_job_service = client.get_service("OfflineUserDataJobService")
+
+# Create the job
+job = client.get_type("OfflineUserDataJob")
+job.type_ = client.enums.OfflineUserDataJobTypeEnum.CUSTOMER_MATCH_USER_LIST
+job.customer_match_user_list_metadata.user_list = (
+    f"customers/{customer_id}/userLists/{user_list_id}"
+)
+
+create_response = offline_user_data_job_service.create_offline_user_data_job(
+    customer_id=customer_id, job=job
+)
+resource_name = create_response.resource_name
+
+# Add user data operations
+operations = []
+for email in customer_emails:
+    op = client.get_type("OfflineUserDataJobOperation")
+    user_identifier = client.get_type("UserIdentifier")
+    user_identifier.hashed_email = hash_email(email)
+    op.create.user_identifiers.append(user_identifier)
+    operations.append(op)
+
+# Upload in batches of 10,000
+for i in range(0, len(operations), 10000):
+    batch = operations[i:i+10000]
+    offline_user_data_job_service.add_offline_user_data_job_operations(
+        resource_name=resource_name,
+        operations=batch,
+        enable_partial_failure=True,
+    )
+
+# Run the job
+offline_user_data_job_service.run_offline_user_data_job(
+    resource_name=resource_name
+)
+```
+
+**Requirements:**
+- Lists must have at least 1,000 active members to serve on Search and Shopping
+- Data must be hashed with SHA-256 before upload
+- Membership duration is 540 days maximum
+
+### Enhanced Conversions for Leads
+
+Enhanced conversions for leads connects online lead form submissions to downstream offline sales without requiring gclid storage.
+
+**How it works:**
+1. User submits a lead form on your site; hashed user data (email) is sent with the conversion tag
+2. When the lead converts offline, you upload the same hashed email with the conversion event
+3. Google matches the two events
+
+**Tag configuration:**
+
+```javascript
+gtag('event', 'conversion', {
+  'send_to': 'AW-XXXXXXXXX/AbCdEf',
+  'value': 0,
+  'currency': 'USD'
+});
+
+// Enhanced conversion data sent automatically via user_data set earlier
+gtag('set', 'user_data', {
+  'sha256_email_address': hashedEmail
+});
+```
+
+### Parallel Tracking Setup
+
+Parallel tracking loads your landing page and click tracking URLs simultaneously, reducing page load latency. It is now required for all Google Ads campaigns.
+
+Ensure your tracking templates and final URLs are configured correctly:
+
+```
+Final URL:        https://www.example.com/product?id=123
+Tracking template: {lpurl}&utm_source=google&utm_medium=cpc&utm_campaign={campaignid}
+```
+
+With parallel tracking, the user goes directly to the Final URL while the tracking URL fires in the background.
+
+### URL Parameters and ValueTrack
+
+ValueTrack parameters dynamically insert campaign data into your URLs for downstream analytics:
+
+| Parameter          | Description                              | Example Value        |
+|--------------------|------------------------------------------|----------------------|
+| `{campaignid}`     | Campaign ID                              | `12345678`           |
+| `{adgroupid}`      | Ad group ID                              | `98765432`           |
+| `{keyword}`        | Keyword that triggered the ad            | `running+shoes`      |
+| `{matchtype}`      | Keyword match type                       | `e`, `p`, `b`        |
+| `{network}`        | Network type                             | `g` (Search), `d` (Display) |
+| `{device}`         | Device                                   | `m`, `t`, `c`        |
+| `{gclid}`          | Google Click ID                          | `EAIaIQob...`        |
+| `{loc_physical_ms}`| Physical location ID                     | `1014221`            |
+| `{placement}`      | Display placement URL                    | `example.com`        |
+
+**Full tracking template example:**
+
+```
+{lpurl}?utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_content={creative}&utm_term={keyword}&matchtype={matchtype}&device={device}&gclid={gclid}
+```
+
+### Cross-Device Tracking
+
+Google Ads tracks users across devices using signed-in Google account data. To maximize cross-device attribution accuracy:
+
+- Enable **auto-tagging** to capture gclid on all clicks
+- Link **GA4 and Google Ads** for shared audience and conversion data
+- Implement **enhanced conversions** to provide additional matching signals
+- Use **data-driven attribution** to properly credit cross-device paths
+- Review the **Devices** report under Campaigns > Insights to understand cross-device behavior
+
+### Store Visits Tracking
+
+Store visits tracking estimates how many ad clicks lead to physical store visits. Requirements:
+
+- Google My Business account linked to Google Ads
+- Sufficient click volume and physical store visit data (typically requires thousands of monthly clicks)
+- Location extensions enabled in your campaigns
+- Available only in eligible countries with sufficient Google Maps data
+
+Store visits appear as a conversion action in your reports. You can import them into bid strategies for omnichannel optimization.
+
+---
+
+<div class="callout callout-tip">
+  <span class="callout-icon">Next Steps</span>
+  <div>
+    <p>This guide covers the core technical fundamentals. For hands-on implementation, start with conversion tracking and work your way through API integration and automation. Refer to the <a href="https://developers.google.com/google-ads/api/docs/start" target="_blank">official Google Ads API documentation</a> and the <a href="https://developers.google.com/tag-platform" target="_blank">Google Tag Platform documentation</a> for the latest reference material.</p>
+  </div>
+</div>
