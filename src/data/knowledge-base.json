@@ -5754,5 +5754,621 @@
     "question": "Education: How do I compete with bigger institutions in Google Ads?",
     "answer": "Focus on **niche program keywords** where large universities don't dominate (e.g., \"online data analytics certificate\" vs. \"MBA program\"). Highlight your unique advantages — flexible schedules, lower cost, career outcomes, smaller class sizes. Use remarketing heavily since education decisions take weeks. Bid on competitor names with comparison-style ad copy emphasizing your differentiators.",
     "links": [{"text": "Education Competition Strategy", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-setup-vietnam",
+    "keywords": ["google ads vietnam", "setup vietnam", "vietnam advertising", "quang cao google", "vietnam google ads"],
+    "category": "setup-guide",
+    "question": "How do I set up Google Ads in Vietnam?",
+    "answer": "Create a Google Ads account at ads.google.com, select **Vietnam (VND)** as your currency, and set timezone to UTC+7. You can pay via international credit card or bank transfer. Target Vietnamese users with **Vietnamese language** and location targeting set to Vietnam.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-setup-thailand",
+    "keywords": ["google ads thailand", "setup thailand", "thailand advertising", "thai google ads"],
+    "category": "setup-guide",
+    "question": "How do I set up Google Ads in Thailand?",
+    "answer": "Set up your account with **Thai Baht (THB)** currency and Bangkok timezone (UTC+7). Thailand has high mobile usage, so prioritize mobile-friendly ads. Target with **Thai language** settings and consider both Thai and English keywords if targeting expats or tourists.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-setup-indonesia",
+    "keywords": ["google ads indonesia", "setup indonesia", "indonesia advertising", "indonesian google ads"],
+    "category": "setup-guide",
+    "question": "How do I set up Google Ads in Indonesia?",
+    "answer": "Create your account with **Indonesian Rupiah (IDR)** and Jakarta timezone (UTC+7). Indonesia is the largest digital market in SEA with 200M+ internet users. Use **Bahasa Indonesia** for language targeting, and note that CPCs are relatively low compared to Western markets.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-setup-malaysia",
+    "keywords": ["google ads malaysia", "setup malaysia", "malaysia advertising", "malaysian google ads"],
+    "category": "setup-guide",
+    "question": "How do I set up Google Ads in Malaysia?",
+    "answer": "Set up with **Malaysian Ringgit (MYR)** and Kuala Lumpur timezone (UTC+8). Malaysia is multilingual, so consider targeting in **Malay, English, and Chinese** depending on your audience. Mobile penetration is very high, making mobile-first ad strategies essential.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-setup-philippines",
+    "keywords": ["google ads philippines", "setup philippines", "philippines advertising", "filipino google ads"],
+    "category": "setup-guide",
+    "question": "How do I set up Google Ads in the Philippines?",
+    "answer": "Create your account with **Philippine Peso (PHP)** and Manila timezone (UTC+8). The Philippines has a highly English-proficient population, so you can run ads in **English or Filipino**. Social and video consumption is massive — consider YouTube campaigns alongside Search.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-setup-singapore",
+    "keywords": ["google ads singapore", "setup singapore", "singapore advertising", "sg google ads"],
+    "category": "setup-guide",
+    "question": "How do I set up Google Ads in Singapore?",
+    "answer": "Set up with **Singapore Dollar (SGD)** and Singapore timezone (UTC+8). Singapore has the highest CPCs in SEA due to intense competition. Target in **English** primarily, and leverage precise location targeting since the country is geographically small but digitally mature.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-sea-regional-strategy",
+    "keywords": ["southeast asia google ads", "SEA advertising", "asean google ads", "regional ads SEA"],
+    "category": "setup-guide",
+    "question": "How do I set up Google Ads for the Southeast Asia market?",
+    "answer": "For a **pan-SEA strategy**, create separate campaigns per country with local currencies and languages. CPCs vary widely — Singapore is 5-10x more expensive than Vietnam or Indonesia. Use **location-based bid adjustments** and tailor ad copy to each market's language and cultural preferences.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-sea-billing-options",
+    "keywords": ["billing southeast asia", "payment SEA", "google ads payment asia", "billing options SEA countries"],
+    "category": "setup-guide",
+    "question": "What billing options are available for Google Ads in Southeast Asia?",
+    "answer": "Most SEA countries support **credit/debit cards** (Visa, Mastercard) and bank transfers. Some markets like Indonesia also offer manual payments. Payment thresholds vary by country — typically $50-$350 equivalent in local currency. Set up **automatic payments** for uninterrupted campaigns.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-sea-language-targeting",
+    "keywords": ["language targeting SEA", "multilingual ads SEA", "SEA languages google ads", "asian language targeting"],
+    "category": "setup-guide",
+    "question": "How should I handle language targeting for SEA markets?",
+    "answer": "Each SEA country has unique language needs. Use **local languages** (Vietnamese, Thai, Bahasa) for best performance as CTRs are 2-3x higher than English ads. Create separate ad groups per language, and remember that Google matches ads to the user's **browser language setting**, not location.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-sea-currency-timezone",
+    "keywords": ["currency settings asia", "timezone google ads SEA", "SEA currency settings", "asia timezone ads"],
+    "category": "setup-guide",
+    "question": "What currency and timezone should I use for each SEA country?",
+    "answer": "Use local currencies for accurate budgeting: **VND** (Vietnam), **THB** (Thailand), **IDR** (Indonesia), **MYR** (Malaysia), **PHP** (Philippines), **SGD** (Singapore). Timezones are UTC+7 for Vietnam/Thailand/Indonesia and UTC+8 for Malaysia/Philippines/Singapore. Currency **cannot be changed** after account creation.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-vietnam-ad-policies",
+    "keywords": ["vietnam ad policies", "vietnam advertising rules", "vietnam google ads restrictions", "vietnam compliance ads"],
+    "category": "setup-guide",
+    "question": "What Google Ads policies are specific to Vietnam?",
+    "answer": "Vietnam has strict advertising regulations including **content censorship laws** and restrictions on political, religious, and gambling content. Pharmaceutical and healthcare ads require government licenses. All ads targeting Vietnamese users must comply with Vietnam's **Advertising Law 2012** and cybersecurity regulations.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-thailand-indonesia-policies",
+    "keywords": ["thailand ad policies", "indonesia ad policies", "thai advertising rules", "indonesian ad restrictions"],
+    "category": "setup-guide",
+    "question": "What Google Ads policies apply in Thailand and Indonesia?",
+    "answer": "Thailand restricts alcohol, gambling, and certain health product advertising under the **Consumer Protection Act**. Indonesia prohibits ads for alcohol and has halal compliance considerations. Both countries require that ads targeting local users be in the **local language** for certain regulated industries.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-advertise-vietnamese-language",
+    "keywords": ["vietnamese language ads", "advertise in vietnamese", "vietnamese ad copy", "tieng viet google ads"],
+    "category": "setup-guide",
+    "question": "How do I create effective Google Ads in Vietnamese?",
+    "answer": "Write ad copy in **Vietnamese with proper diacritics** (accents matter for meaning). Use Vietnamese keyword research tools since direct translations from English often miss local search intent. Keep headlines concise as Vietnamese words can be longer, and test both **formal and conversational** tones.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-target-vietnamese-users",
+    "keywords": ["target vietnamese users", "vietnam audience targeting", "reach vietnamese customers", "vietnam demographics ads"],
+    "category": "setup-guide",
+    "question": "How do I effectively target Vietnamese users with Google Ads?",
+    "answer": "Set location to Vietnam with **Vietnamese language** targeting. Over 70% of Vietnamese internet users are on mobile, so optimize for mobile-first. Use **local keywords** rather than translated English terms, and schedule ads around Vietnamese peak hours (7-9 PM local time).",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-first-campaign-step-by-step",
+    "keywords": ["first campaign step by step", "create first campaign guide", "campaign setup walkthrough", "beginner campaign creation"],
+    "category": "setup-guide",
+    "question": "How do I set up my first Google Ads campaign step by step?",
+    "answer": "Start by choosing a **campaign objective** (sales, leads, or traffic), then select Search as your campaign type. Set a daily budget ($10-20 to start), pick your target location and language, add 10-20 keywords in 2-3 ad groups, write 3 responsive search ads per group, and set up **conversion tracking** before launching.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-display-campaign-from-scratch",
+    "keywords": ["setup display campaign scratch", "create display campaign beginner", "display campaign walkthrough", "new display campaign guide"],
+    "category": "setup-guide",
+    "question": "How do I set up a Display campaign from scratch?",
+    "answer": "Create a Display campaign, upload **responsive display ads** (multiple images, headlines, descriptions). Target using affinity audiences, in-market segments, or remarketing lists. Set a modest daily budget since Display is for awareness — expect lower conversion rates than Search. Use **frequency capping** (3-5 impressions/day) to avoid ad fatigue.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-first-week-plan",
+    "keywords": ["first week google ads", "week one google ads", "new account first week", "starting google ads week 1"],
+    "category": "setup-guide",
+    "question": "What should I do in my first week with Google Ads?",
+    "answer": "Day 1-2: Monitor that ads are serving and **conversion tracking** fires correctly. Day 3-4: Review search terms report and add negative keywords. Day 5-7: Check Quality Scores, pause underperforming keywords, and ensure your daily budget isn't depleting too early. Don't panic about costs — the first week is about **data collection**.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-first-month-optimization",
+    "keywords": ["first month google ads", "month one optimization plan", "new account 30 day plan", "first month strategy"],
+    "category": "setup-guide",
+    "question": "What's my optimization plan for the first month with Google Ads?",
+    "answer": "Week 1: Collect data, fix tracking issues. Week 2: Refine keywords, add negatives, test ad copy. Week 3: Analyze **conversion data**, pause non-converting keywords, adjust bids. Week 4: Review overall CPA/ROAS, consider switching to **automated bidding** if you have 30+ conversions. Set monthly benchmarks going forward.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-sea-mobile-first",
+    "keywords": ["mobile strategy SEA", "mobile ads southeast asia", "mobile first SEA markets", "mobile advertising asia"],
+    "category": "setup-guide",
+    "question": "Why is mobile-first strategy critical for SEA markets?",
+    "answer": "Over **80% of internet users in Southeast Asia** access the web primarily via mobile. Design all landing pages mobile-first, use click-to-call ads, and keep load times under 3 seconds on 3G/4G connections. Mobile CPCs are typically 20-30% lower than desktop in SEA, making mobile the most **cost-effective channel**.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-google-ads-editor-bulk",
+    "keywords": ["google ads editor bulk", "bulk editing campaigns", "offline editing tool", "ads editor management"],
+    "category": "setup-guide",
+    "question": "How do I use Google Ads Editor for bulk campaign management?",
+    "answer": "Download **Google Ads Editor** (free desktop app) for making bulk changes offline. You can copy campaigns, find and replace text across ads, make mass bid adjustments, and import/export via CSV. Especially useful for managing large accounts with **hundreds of ad groups**. Always download latest data before editing.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-conversion-tracking-first-time",
+    "keywords": ["setup conversion tracking beginner", "install conversion tag first time", "google ads tracking beginner", "conversion tracking new"],
+    "category": "setup-guide",
+    "question": "How do I set up conversion tracking for the first time?",
+    "answer": "Go to Tools > Conversions > click '+' to create a new action. Choose **website** as the source, name it (e.g., 'Purchase' or 'Lead Form'), and set the value. Install the tracking tag via **Google Tag Manager** (recommended) or paste the code directly on your thank-you page. Verify with Tag Assistant within 24 hours.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-account-suspended",
+    "keywords": ["account suspended", "google ads suspended", "account suspension fix", "banned google ads account"],
+    "category": "troubleshooting-guide",
+    "question": "Why was my Google Ads account suspended?",
+    "answer": "Common suspension reasons include **suspicious payment activity**, circumventing systems policies, or repeated ad disapprovals. Check your email for a suspension notice with the specific reason. File an appeal through the Google Ads **Contact Us** page with documentation proving compliance. Avoid creating new accounts — that causes permanent bans.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-ads-not-showing",
+    "keywords": ["ads not showing", "ads not running", "no impressions", "why ads not displaying", "ads not serving"],
+    "category": "troubleshooting-guide",
+    "question": "Why are my Google Ads not showing?",
+    "answer": "Check these in order: payment method is valid, campaign/ad group/ads are **enabled** (not paused), budget isn't depleted, keywords aren't all low search volume, bids aren't too low, and ads aren't disapproved. Use the **Ad Preview tool** (not regular Google Search) to test visibility.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-conversion-tracking-broken",
+    "keywords": ["conversion tracking not working", "no conversions recording", "tracking broken", "conversions not showing up"],
+    "category": "troubleshooting-guide",
+    "question": "Why is my conversion tracking not working?",
+    "answer": "Use **Google Tag Assistant** to verify the tag fires on your conversion page. Common issues: tag installed on wrong page, tag firing before redirect completes, or duplicate tags counting twice. Check the Conversions column in Google Ads — a **No recent conversions** warning means the tag hasn't fired in 7+ days.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-quality-score-dropped",
+    "keywords": ["quality score dropped", "QS decrease", "quality score declining", "low quality score fix"],
+    "category": "troubleshooting-guide",
+    "question": "Why did my Quality Score drop?",
+    "answer": "Quality Score drops from declining **expected CTR** (ad fatigue or increased competition), reduced ad relevance (keywords not matching ad copy), or landing page issues (slow load, poor mobile experience). Check which component dropped in keyword diagnostics. Fix by refreshing ad copy, tightening ad group themes, and improving **landing page speed**.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-cpc-suddenly-increased",
+    "keywords": ["CPC increased", "cost per click rising", "CPC spike", "why CPC went up suddenly"],
+    "category": "troubleshooting-guide",
+    "question": "Why did my CPC suddenly increase?",
+    "answer": "Sudden CPC spikes are usually caused by **new competitors** entering the auction, seasonal demand increases, or a Quality Score drop. Check Auction Insights for new competitors, review QS history, and look at impression share. If it's competition-driven, focus on improving ad relevance and **landing page experience** rather than just raising bids.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-impressions-dropped",
+    "keywords": ["impressions dropped", "fewer impressions", "impression drop suddenly", "low impression share"],
+    "category": "troubleshooting-guide",
+    "question": "Why did my impressions suddenly drop?",
+    "answer": "Check **Search Impression Share** to diagnose — 'Lost IS (Budget)' means your budget ran out, 'Lost IS (Rank)' means bids or Quality Score fell. Other causes: seasonal search volume decline, accidentally paused keywords, negative keywords blocking queries, or a **policy violation** causing ad disapprovals. Review Change History for unintended modifications.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-limited-by-budget",
+    "keywords": ["limited by budget", "budget limited campaign", "constrained budget fix", "fix limited budget status"],
+    "category": "troubleshooting-guide",
+    "question": "How do I fix the 'Limited by budget' status?",
+    "answer": "**Limited by budget** means your campaign could show more ads but runs out of daily budget. Either increase the budget, or optimize by pausing low-performing keywords, reducing bids on expensive terms, tightening targeting, and improving Quality Score. Use the **Budget Explorer** tool in Google Ads to see estimated impact of budget changes.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-below-first-page-bid",
+    "keywords": ["below first page bid", "first page bid estimate", "bid too low warning", "ad not on first page"],
+    "category": "troubleshooting-guide",
+    "question": "How do I fix the 'below first page bid' warning?",
+    "answer": "This means your bid is too low to appear on page one. Either **raise your bid** to the estimated first page amount, or improve your Quality Score (which lowers the required bid). Focus on ad relevance and CTR improvement first. If the estimated bid exceeds your target CPA, consider **long-tail keyword alternatives** with lower competition.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-ad-disapprovals-fix",
+    "keywords": ["ad disapproved", "fix ad disapproval", "ad policy violation fix", "disapproved ads resolve"],
+    "category": "troubleshooting-guide",
+    "question": "How do I fix ad disapprovals?",
+    "answer": "Click the disapproved ad to see the **specific policy violation** (misleading content, trademark issues, restricted content). Edit the ad to comply — remove superlatives like 'best' or 'guaranteed,' ensure the landing page matches ad claims, and check for prohibited content. After editing, ads go through **re-review automatically**. Appeal if you believe it's incorrect.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-not-eligible-keywords",
+    "keywords": ["not eligible keywords", "keyword not eligible status", "keyword status issues fix", "fix keyword eligibility"],
+    "category": "troubleshooting-guide",
+    "question": "How do I fix 'not eligible' keywords?",
+    "answer": "Keywords marked **not eligible** are usually flagged for policy violations (restricted content, trademarks, or sensitive categories). Check the status tooltip for the specific reason. For 'low search volume,' the keyword is paused automatically — try **broader match types**. For policy issues, modify the keyword or request an exception through Google support.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-debug-gtm-tags",
+    "keywords": ["debug GTM", "google tag manager debug", "GTM not firing fix", "tag manager troubleshooting"],
+    "category": "troubleshooting-guide",
+    "question": "How do I debug Google Tag Manager tags?",
+    "answer": "Use GTM's built-in **Preview mode** (click Preview in GTM workspace) to see which tags fire on each page in real time. Check that triggers match the correct events (page view, click, form submission). Verify variables are populated correctly in the Variables tab. Use **Tag Assistant** Chrome extension as a secondary check.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-verify-conversion-tracking",
+    "keywords": ["verify conversion tracking", "test conversions setup", "check conversion working", "conversion tracking verification"],
+    "category": "troubleshooting-guide",
+    "question": "How do I verify conversion tracking is working correctly?",
+    "answer": "Submit a test conversion on your website, then check the **Conversions** column in Google Ads (may take up to 24 hours). Use Google Tag Assistant to verify the tag fires in real time. Go to Tools > Conversions and check each action's status — it should show **Recording conversions**. Cross-reference with Google Analytics goal completions.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-smart-bidding-not-working",
+    "keywords": ["smart bidding not working", "automated bidding poor results", "tCPA not meeting target", "smart bidding issues fix"],
+    "category": "troubleshooting-guide",
+    "question": "Why is Smart Bidding not performing well?",
+    "answer": "Smart Bidding needs **30+ conversions per month** to optimize effectively. Poor performance usually means insufficient data, unrealistic targets (CPA too low or ROAS too high), or recent major changes disrupting the learning period. Ensure **conversion tracking is accurate** — inflated or missing conversions misguide the algorithm. Give it 2-4 weeks after changes.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-merchant-center-feed-errors",
+    "keywords": ["merchant center errors fix", "feed errors resolve", "shopping feed problems fix", "merchant center disapproval fix"],
+    "category": "troubleshooting-guide",
+    "question": "How do I fix Merchant Center feed errors?",
+    "answer": "Go to Merchant Center > **Diagnostics** to see all errors. Common fixes: update prices/availability to match your website, add missing **GTIN/MPN identifiers**, fix image quality (no watermarks, no placeholders), and resolve shipping/tax misconfigurations. Use supplemental feeds for quick fixes. Critical errors suspend your entire account, so address those first.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-account-under-review",
+    "keywords": ["account under review", "account review period", "new account review time", "ad review delay"],
+    "category": "troubleshooting-guide",
+    "question": "Why is my new Google Ads account under review?",
+    "answer": "New accounts undergo an **initial review** that typically takes 1-3 business days. Google verifies your identity, payment method, and ad compliance. During this time, ads may not serve. Speed it up by ensuring billing info matches your business details, ads comply with all policies, and your **landing pages are live** and functional.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-conversion-reporting-lag",
+    "keywords": ["conversion lag reporting", "delayed conversions data", "conversion reporting delay", "conversions not immediate"],
+    "category": "troubleshooting-guide",
+    "question": "Why are my conversions delayed in reporting?",
+    "answer": "Google Ads attributes conversions to the **click date**, not the conversion date, so recent days always look underreported. The standard conversion window is 30 days, meaning today's clicks may convert weeks later. Wait at least **7-14 days** before evaluating recent performance. Use the conversion lag report for accurate assessment.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-search-terms-irrelevant",
+    "keywords": ["irrelevant search terms", "wasted spend search terms", "bad search queries fix", "search term cleanup"],
+    "category": "troubleshooting-guide",
+    "question": "How do I stop paying for irrelevant search terms?",
+    "answer": "Review the **Search Terms report** weekly (Insights > Search Terms). Add irrelevant terms as **negative keywords** at campaign or account level. Common culprits: 'free,' 'jobs,' 'salary,' 'DIY,' and competitor names you don't want. Use shared negative keyword lists across campaigns for efficiency.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-ad-strength-poor",
+    "keywords": ["ad strength poor", "improve ad strength", "low ad strength fix", "RSA ad strength"],
+    "category": "troubleshooting-guide",
+    "question": "How do I improve my ad strength from 'Poor' to 'Excellent'?",
+    "answer": "Add more **unique headlines** (aim for 15) with varied messaging — features, benefits, CTAs, and keywords. Write 4 distinct descriptions. Include popular keywords in at least 3 headlines. Don't repeat ideas across headlines. Pin sparingly — over-pinning reduces Google's ability to test combinations. **Excellent ad strength** correlates with 5-10% more conversions on average.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-billing-payment-declined",
+    "keywords": ["payment declined", "billing issue", "credit card declined google ads", "payment failed fix"],
+    "category": "troubleshooting-guide",
+    "question": "Why was my Google Ads payment declined?",
+    "answer": "Common causes: expired card, insufficient funds, bank blocking international charges, or hitting your **credit limit**. Update your payment method in Billing > Payment methods. Contact your bank to authorize Google charges (billed from Google Ireland or Google Asia Pacific). Add a **backup payment method** to prevent campaign interruptions from billing failures.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-learning-period-issues",
+    "keywords": ["learning period problems", "learning limited status", "bidding learning phase", "campaign stuck learning"],
+    "category": "troubleshooting-guide",
+    "question": "Why is my campaign stuck in 'Learning' or 'Learning limited'?",
+    "answer": "**Learning limited** means your campaign isn't getting enough conversions for Smart Bidding to optimize. You need roughly 50 conversions in 7 days. Fix by increasing budget, raising CPA/lowering ROAS targets, broadening targeting, or using a **higher-funnel conversion action** (e.g., add-to-cart instead of purchase). Avoid frequent changes that reset the learning period.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-low-ctr-fix",
+    "keywords": ["low CTR fix", "improve click through rate", "CTR too low", "poor CTR troubleshoot"],
+    "category": "troubleshooting-guide",
+    "question": "Why is my CTR low and how do I fix it?",
+    "answer": "Low CTR usually means your ads aren't compelling or aren't matching search intent. Rewrite headlines with **stronger CTAs** and specific value props (prices, percentages, guarantees). Ensure ad copy matches the user's keyword intent closely. Add all available **ad extensions** to increase ad real estate. Benchmark: Search CTR should be 3-5%+ for non-brand keywords.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "cs-saas-free-tool-strategy",
+    "keywords": ["free tool marketing ads", "saas free tool lead gen", "product led growth google ads", "free tool acquisition"],
+    "category": "case-study",
+    "question": "How do SaaS companies use free tools for Google Ads lead gen?",
+    "answer": "Companies like HubSpot and Ahrefs offer **free tools** (website grader, backlink checker) and run Google Ads driving traffic to them. Users get instant value, then see upgrade prompts. This **product-led growth** approach achieves 3-5x better conversion rates than traditional landing pages because users experience the product before committing.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "cs-gym-fitness-local",
+    "keywords": ["gym google ads", "fitness advertising local", "gym membership ads", "fitness center marketing"],
+    "category": "case-study",
+    "question": "How do gyms and fitness centers succeed with Google Ads?",
+    "answer": "Gyms target **hyperlocal keywords** like 'gym near me' and 'fitness center [neighborhood]' with a 3-5 mile radius. Top performers use **call extensions** and promote free trial offers. Budget peaks in January (New Year resolutions) and September (back-to-routine). A $500-1,000/month budget can generate 30-50 leads for a single location.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "cs-dentist-practice",
+    "keywords": ["dentist google ads", "dental practice advertising", "dentist marketing ads", "dental office google ads"],
+    "category": "case-study",
+    "question": "How do dental practices succeed with Google Ads?",
+    "answer": "Dental practices target **high-value keywords** like 'emergency dentist near me' and 'dental implants [city]'. With patient lifetime values of $5,000-10,000+, even $30-50 CPCs deliver strong ROI. Top performers use **call tracking** to measure phone leads and promote new patient specials. A typical practice spends $1,500-3,000/month.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "cs-insurance-company",
+    "keywords": ["insurance google ads", "insurance company advertising", "insurance lead gen", "insurance case study"],
+    "category": "case-study",
+    "question": "How do insurance companies succeed with Google Ads?",
+    "answer": "Insurance companies target **high-intent quote keywords** like 'car insurance quote' and 'health insurance plans near me.' CPCs range from $10-50+ but customer lifetime values justify the cost. Top insurers use **lead form extensions** for quick quotes and import policy-binding data as offline conversions to optimize for actual customers, not just leads.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "cs-home-services-plumber",
+    "keywords": ["plumber google ads", "home services advertising", "HVAC google ads", "contractor ads case study"],
+    "category": "case-study",
+    "question": "How do home service businesses (plumbers, HVAC) succeed with Google Ads?",
+    "answer": "Home service businesses thrive on **local Search** with 'near me' and emergency keywords ('emergency plumber [city]'). Use **call-only ads** during business hours and Local Services Ads where available. With average job values of $200-2,000+, even $30-50 cost per lead delivers excellent ROI. Track calls and booked jobs, not just clicks.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "cs-ecommerce-fashion",
+    "keywords": ["fashion google ads", "clothing ecommerce ads", "fashion brand advertising", "apparel google ads"],
+    "category": "case-study",
+    "question": "How do fashion e-commerce brands use Google Ads?",
+    "answer": "Fashion brands rely heavily on **Shopping ads** with high-quality lifestyle images and optimized product titles. They use dynamic remarketing to show exact items browsed, and Performance Max to reach shoppers across YouTube and Display. Seasonal collections require frequent **feed updates** and creative refreshes. Top brands segment campaigns by category, margin, and bestseller status.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "cs-nonprofit-grants",
+    "keywords": ["nonprofit google ads", "google ad grants", "charity advertising", "nonprofit case study"],
+    "category": "case-study",
+    "question": "How do nonprofits use Google Ad Grants?",
+    "answer": "Eligible nonprofits get **$10,000/month in free Google Ads** through the Ad Grants program. Apply at google.com/grants. Restrictions include a $2.00 max CPC (unless using Smart Bidding), Search campaigns only, and a required 5% CTR. Focus on **mission-related keywords** with strong landing pages. Many nonprofits use grants for donor acquisition and volunteer recruitment.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-ecom-seasonal-strategy",
+    "keywords": ["ecommerce seasonal ads", "holiday advertising strategy", "black friday google ads", "seasonal ecommerce campaigns"],
+    "category": "industry-problems",
+    "question": "E-commerce: How do I plan for seasonal peaks like Black Friday?",
+    "answer": "Start building remarketing audiences **6-8 weeks before** peak events. Increase budgets 2-3x during peak days, pre-approve all ad copy to avoid review delays, and use **countdown customizers** in ads for urgency. Ensure your Merchant Center feed is error-free and inventory is accurate. After the event, run post-season remarketing to convert remaining browsers.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-ecom-competitor-shopping",
+    "keywords": ["competitor shopping ads", "compete shopping ads", "shopping ads competition", "win shopping auctions"],
+    "category": "industry-problems",
+    "question": "E-commerce: How do I compete against bigger brands in Shopping Ads?",
+    "answer": "You can't outspend big brands, but you can out-optimize them. Focus on **product title optimization** (include key attributes competitors miss), higher-quality images, competitive pricing, and fast shipping mentions. Use **custom labels** to bid aggressively only on your highest-margin, best-converting products. Smaller catalogs with perfect feeds often beat larger ones with messy data.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-saas-free-vs-paid-trial",
+    "keywords": ["free trial vs paid trial ads", "saas trial strategy", "freemium ads", "trial conversion optimization"],
+    "category": "industry-problems",
+    "question": "SaaS: Should I optimize for free trial signups or paid conversions?",
+    "answer": "It depends on your **average contract value (ACV)**. High-ACV enterprise products ($10K+/year) should optimize for demo requests since buyers need guidance. Lower-ACV self-serve products work better with free trials. Track the full funnel — trial-to-paid rate matters more than trial volume. Use **offline conversion imports** to tell Google which trials actually convert to paying customers.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-leadgen-speed-to-lead",
+    "keywords": ["speed to lead", "lead response time", "fast lead follow up", "lead response best practice"],
+    "category": "industry-problems",
+    "question": "Lead gen: How does response time affect Google Ads lead quality?",
+    "answer": "Responding within **5 minutes** increases contact rates by 8x compared to responding in 30 minutes. Integrate your lead forms directly with your CRM for **instant notifications**. Leads from Google Ads are actively searching, so they go cold fast. Automate an immediate SMS or email confirmation, then have sales follow up within minutes for best conversion rates.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-retail-omnichannel-tracking",
+    "keywords": ["omnichannel advertising", "online to offline tracking", "store visit conversions", "local inventory ads tracking"],
+    "category": "industry-problems",
+    "question": "Retail: How do I track online ads driving in-store visits?",
+    "answer": "Enable **Store Visit conversions** (requires sufficient foot traffic data) and use Local Inventory Ads to show nearby product availability. Link your Google Business Profile and use location extensions. Performance Max with store visit goals can optimize for both online and offline conversions. Google estimates store visits using **location history** from opted-in users.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-healthcare-telehealth",
+    "keywords": ["telehealth advertising", "telemedicine google ads", "online doctor ads", "virtual healthcare ads"],
+    "category": "industry-problems",
+    "question": "Healthcare: How do I advertise telehealth services?",
+    "answer": "Target keywords like 'online doctor consultation' and 'telehealth near me' with location targeting for your licensed states. Ensure compliance with **healthcare advertising policies** and display provider credentials prominently. Use call extensions for immediate consultations. Telehealth has seen massive search growth, making **branded and non-branded Search** campaigns highly effective.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-travel-vacation-rental",
+    "keywords": ["vacation rental ads", "airbnb competitor ads", "holiday rental advertising", "vacation home google ads"],
+    "category": "industry-problems",
+    "question": "Travel: How do vacation rental owners advertise on Google?",
+    "answer": "Target **destination-specific keywords** like 'vacation rental in [city]' and 'beachfront house [location].' Use **high-quality property photos** in responsive display ads for remarketing. List on Google Vacation Rentals (linked through connectivity partners) for direct visibility. Focus on differentiators like private pool, pet-friendly, or unique amenities in your ad copy.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-ecom-returns-impact",
+    "keywords": ["returns impact ROAS", "product returns advertising", "return rate google ads", "ecommerce returns optimization"],
+    "category": "industry-problems",
+    "question": "E-commerce: How do high return rates affect my Google Ads ROAS?",
+    "answer": "High return rates inflate your reported ROAS since Google counts the sale but not the return. Import **refund data** back into Google Ads using the Conversion Adjustments feature. This shows your true ROAS and helps Smart Bidding avoid optimizing for products or audiences with high return rates. Products with **30%+ return rates** may actually be unprofitable despite good initial ROAS.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-sea-ecommerce-platforms",
+    "keywords": ["shopee google ads", "lazada advertising", "SEA ecommerce platform ads", "marketplace advertising SEA"],
+    "category": "setup-guide",
+    "question": "How do I use Google Ads to drive traffic to SEA e-commerce platforms?",
+    "answer": "Many SEA sellers advertise on Google to drive traffic to their **Shopee or Lazada** stores. Use Search campaigns targeting product keywords and link to your marketplace listings. Track conversions using UTM parameters and platform analytics. Note that you'll have less tracking control than with your own website — consider building a **standalone store** alongside marketplace presence.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-sea-local-payment-methods",
+    "keywords": ["local payment methods SEA", "momo google ads", "grabpay advertising", "SEA fintech payments"],
+    "category": "setup-guide",
+    "question": "How do local payment preferences affect Google Ads in SEA?",
+    "answer": "SEA users prefer local payment methods like **MoMo, GrabPay, GCash, and OVO** over credit cards. Your landing page should support these methods to maximize conversion rates. Highlight available payment options in ad copy and extensions. Offering **cash on delivery** is still important in Vietnam and Indonesia and should be mentioned in your ads.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-cambodia-myanmar-setup",
+    "keywords": ["cambodia google ads", "myanmar google ads", "laos google ads", "emerging SEA markets ads"],
+    "category": "setup-guide",
+    "question": "How do I set up Google Ads for emerging SEA markets like Cambodia and Myanmar?",
+    "answer": "For Cambodia, use **USD** as currency (widely accepted) with UTC+7 timezone. Myanmar uses MMK. These markets have lower digital ad competition and very low CPCs ($0.05-0.30). Target in both **local languages and English**. Mobile-only strategies are essential as desktop usage is minimal. Facebook often has larger reach here, so consider Google Ads as a supplement.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "cs-travel-agency-sea",
+    "keywords": ["travel agency SEA ads", "southeast asia tourism ads", "tour operator google ads", "SEA travel marketing"],
+    "category": "case-study",
+    "question": "How do SEA travel agencies use Google Ads?",
+    "answer": "SEA travel agencies target inbound tourists searching in **English, Chinese, Korean, and Japanese** for destinations like Bali, Phuket, and Halong Bay. They run multilingual campaigns with destination-specific landing pages. **Dynamic Search Ads** capture long-tail tour queries automatically. Successful agencies spend $2,000-10,000/month during peak travel seasons with 5-10x ROAS.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "cs-fintech-sea",
+    "keywords": ["fintech SEA google ads", "digital banking ads asia", "fintech advertising southeast asia", "digital wallet marketing"],
+    "category": "case-study",
+    "question": "How do SEA fintech companies use Google Ads?",
+    "answer": "SEA fintech companies like GrabPay and OVO use Google Ads to drive **app installs** and feature awareness. They target financial need keywords ('send money online,' 'instant loan') and run App campaigns optimized for first transactions. YouTube ads build trust in markets where **digital financial literacy** is growing. Compliance with local financial regulations is critical for ad approvals.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-b2b-google-ads-content-syndication",
+    "keywords": ["content syndication ads", "B2B content distribution", "whitepaper distribution google", "demand gen B2B"],
+    "category": "industry-problems",
+    "question": "B2B: How do I use Google Ads for content syndication?",
+    "answer": "Run **Demand Gen campaigns** (formerly Discovery) to distribute whitepapers and guides across Gmail, YouTube, and Discover feeds. Target in-market B2B audiences and custom segments based on competitor website visitors. Use lead form assets for frictionless downloads. Content syndication via Google typically costs **$20-60 per lead**, competitive with dedicated syndication platforms.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-remarketing-list-too-small",
+    "keywords": ["remarketing list too small", "audience too small", "not enough users remarketing", "remarketing minimum size"],
+    "category": "troubleshooting-guide",
+    "question": "Why is my remarketing list too small to use?",
+    "answer": "Google requires minimum audience sizes: **1,000 users for Search** remarketing and **100 users for Display**. If your list is too small, increase website traffic first, expand your membership duration (from 30 to 90 or 180 days), and ensure your remarketing tag is installed on **all pages** (not just specific ones). Consider combining similar audiences to meet the threshold.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-pmax-no-transparency",
+    "keywords": ["performance max transparency", "pmax search terms", "pmax reporting limited", "see pmax placements"],
+    "category": "troubleshooting-guide",
+    "question": "Why can't I see where Performance Max is spending my budget?",
+    "answer": "PMax has limited reporting by design — you can't see individual search terms or placements like in Search/Display campaigns. Use **Insights tab** for top-performing search categories, and **Placement reports** for high-level channel breakdowns. Check asset group performance for creative insights. If you need more control, run **dedicated Search and Shopping** campaigns alongside PMax.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-ga4-google-ads-mismatch",
+    "keywords": ["GA4 google ads data mismatch", "analytics ads different numbers", "conversion discrepancy", "GA4 vs google ads conversions"],
+    "category": "troubleshooting-guide",
+    "question": "Why do Google Ads and GA4 show different conversion numbers?",
+    "answer": "This is normal. Google Ads attributes conversions to the **click date** while GA4 uses the conversion date. Google Ads counts conversions per click, GA4 counts per session. Different attribution models (last-click vs data-driven) also cause gaps. A **10-20% discrepancy** is typical. Use Google Ads data for bid optimization and GA4 for cross-channel analysis.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-legal-local-service-ads",
+    "keywords": ["local service ads legal", "LSA lawyers", "google screened", "lawyer LSA setup"],
+    "category": "industry-problems",
+    "question": "Legal: Should I use Local Services Ads instead of regular Search?",
+    "answer": "**Local Services Ads (LSAs)** are excellent for lawyers — you pay per lead (not per click), and Google screens your firm for legitimacy. LSAs appear above regular Search ads with a 'Google Screened' badge. They're ideal for practice areas with local demand (family law, personal injury). Run LSAs **alongside** Search Ads for maximum SERP coverage, not as a replacement.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-finance-crypto-ads",
+    "keywords": ["cryptocurrency advertising", "crypto google ads", "bitcoin advertising", "crypto ad policy"],
+    "category": "industry-problems",
+    "question": "Finance: Can I advertise cryptocurrency on Google Ads?",
+    "answer": "Yes, but with strict requirements. You must be **certified by Google** as a cryptocurrency exchange or wallet provider. DeFi protocols and NFTs have additional restrictions. Apply for certification through Google Ads policy center. Ads cannot promise guaranteed returns. Geographic restrictions apply — **not all countries** allow crypto advertising. Certification takes 5-7 business days to process.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-sea-ramadan-advertising",
+    "keywords": ["ramadan advertising SEA", "ramadan google ads", "hari raya ads", "muslim holiday advertising"],
+    "category": "setup-guide",
+    "question": "How do I plan Google Ads around Ramadan in SEA markets?",
+    "answer": "Ramadan is a major shopping season in Malaysia and Indonesia with **online spending surging 2-3x**. Start campaigns 2 weeks before Ramadan, peak during the last 2 weeks leading to Hari Raya. Schedule ads during **late evening hours** (after iftar) when browsing peaks. Target Ramadan-specific keywords and create festive ad copy. Budget should increase 50-100% during this period.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "sg-sea-cross-border-ecommerce",
+    "keywords": ["cross border ecommerce SEA", "sell to SEA from overseas", "international shipping SEA", "export to southeast asia ads"],
+    "category": "setup-guide",
+    "question": "How do I run Google Ads for cross-border e-commerce into SEA?",
+    "answer": "Create separate campaigns per target country with **local language** ad copy and currency. Highlight international shipping costs and delivery times prominently — hidden fees kill conversion rates in SEA. Use **Merchant Center** cross-border shipping settings. Target with location + language combinations and consider offering local payment methods through payment gateway integrations.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "cs-food-delivery-app",
+    "keywords": ["food delivery app ads", "grab food advertising", "food app google ads", "delivery app marketing"],
+    "category": "case-study",
+    "question": "How do food delivery apps use Google Ads?",
+    "answer": "Food delivery apps run **App campaigns** optimized for first orders (not just installs). They target meal-time keywords ('food delivery near me,' 'order lunch online') with aggressive time-of-day scheduling. Dynamic remarketing shows users their **previously ordered restaurants**. Promo code extensions drive first-time conversions. Top apps combine Search with YouTube pre-roll during cooking content.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "cs-luxury-brand-ads",
+    "keywords": ["luxury brand google ads", "premium brand advertising", "high end product ads", "luxury ecommerce ads"],
+    "category": "case-study",
+    "question": "How do luxury brands use Google Ads?",
+    "answer": "Luxury brands focus on **brand protection** (bidding on own brand name to prevent competitors) and high-intent product searches. They use Shopping ads with premium imagery and avoid discounting language. Targeting skews toward **high-income demographics** and in-market luxury audiences. YouTube ads showcase craftsmanship stories. Many luxury brands measure brand lift rather than direct ROAS.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-app-ios-tracking-challenges",
+    "keywords": ["iOS tracking google ads", "ATT framework ads", "apple privacy google ads", "iOS conversion tracking"],
+    "category": "industry-problems",
+    "question": "App developers: How do I handle iOS tracking challenges?",
+    "answer": "Apple's **App Tracking Transparency (ATT)** limits conversion tracking for iOS. Use Google's **SKAdNetwork** integration for iOS attribution. Implement on-device conversion measurement in your App campaigns. Model conversions for opted-out users using Google's conversion modeling. Expect 20-40% of iOS conversions to be modeled rather than directly observed.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-saas-churn-reduction-ads",
+    "keywords": ["reduce churn ads", "SaaS retention advertising", "win back customers ads", "churn prevention google ads"],
+    "category": "industry-problems",
+    "question": "SaaS: Can I use Google Ads to reduce churn?",
+    "answer": "Upload your **churned customer email list** as a Customer Match audience and run targeted Display/YouTube campaigns highlighting new features they missed. Create remarketing campaigns for customers who visited your cancellation page but didn't cancel. This win-back strategy typically costs **60-80% less** than acquiring new customers and has higher conversion rates.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "ip-education-international-students",
+    "keywords": ["international student recruitment ads", "study abroad advertising", "university international ads", "overseas student marketing"],
+    "category": "industry-problems",
+    "question": "Education: How do I recruit international students with Google Ads?",
+    "answer": "Target students in source countries (India, China, SEA) searching in **English and local languages** for study abroad programs. Run Search campaigns for 'study [subject] in [country]' keywords. Use YouTube to showcase campus life and student testimonials. Set up **country-specific campaigns** with local currency to manage budgets per market. Application deadlines create natural urgency in ad copy.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-competitor-bidding-on-brand",
+    "keywords": ["competitor bidding my brand", "brand name hijacking", "competitor using my brand", "trademark google ads"],
+    "category": "troubleshooting-guide",
+    "question": "A competitor is bidding on my brand name. What can I do?",
+    "answer": "First, run your own **branded campaign** — you'll pay much less than they do thanks to higher Quality Score. If they use your trademarked name in their ad copy, file a **trademark complaint** with Google (they can't use it in headlines/descriptions, but can bid on the keyword). Run brand campaigns with all extensions to maximize your SERP real estate and push them down.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
+  },
+  {
+    "id": "tg-conversion-double-counting",
+    "keywords": ["double counting conversions", "duplicate conversions", "conversion counting too high", "inflated conversions fix"],
+    "category": "troubleshooting-guide",
+    "question": "Why are my conversions being double-counted?",
+    "answer": "Check if you have duplicate conversion tags — one from Google Ads and one imported from GA4 counting the same action. Also verify the tag doesn't fire on page reloads (use a 'once per page' trigger in GTM). Set your conversion counting to **One** for lead gen actions or **Every** for purchases. Review your Conversions tab — remove any **duplicate conversion actions**.",
+    "links": [{"text": "Google Ads Guide", "url": "/google-mindful-solution-architect/projects/google-ads/"}]
   }
 ]
