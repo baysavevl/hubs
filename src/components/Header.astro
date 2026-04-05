@@ -7,7 +7,7 @@ function isActive(path: string) {
   return currentPath.startsWith(path);
 }
 
-const isLearnActive = isActive(`${base}learn`) || isActive(`${base}projects`) || isActive(`${base}tips-and-tricks`) || isActive(`${base}success-story`) || isActive(`${base}news`);
+const isLearnActive = isActive(`${base}learn`) || isActive(`${base}projects`) || isActive(`${base}tips-and-tricks`) || isActive(`${base}success-story`) || isActive(`${base}news`) || isActive(`${base}solutions`);
 ---
 
 <header class="w-full border-b border-[var(--color-border)] bg-white/80 backdrop-blur-md sticky top-0 z-50">
@@ -76,6 +76,9 @@ const isLearnActive = isActive(`${base}learn`) || isActive(`${base}projects`) ||
           </a>
           <a href={`${base}news`} class:list={["dropdown-item", isActive(`${base}news`) ? "active" : ""]}>
             <span class="dropdown-icon">📰</span> News
+          </a>
+          <a href={`${base}solutions`} class:list={["dropdown-item", isActive(`${base}solutions`) ? "active" : ""]}>
+            <span class="dropdown-icon">🛠️</span> Solutions
           </a>
         </div>
       </div>

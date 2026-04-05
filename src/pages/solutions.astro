@@ -1,0 +1,258 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+
+const solutions = [
+  {
+    region: "North America",
+    cases: [
+      {
+        company: "Wayfair",
+        industry: "E-commerce / Furniture",
+        problem: "High cart abandonment rates and difficulty reaching customers across the full purchase funnel for high-consideration home goods.",
+        solution: "Implemented **Performance Max campaigns** with product feeds and dynamic remarketing. Used audience signals from past purchasers to find similar high-value customers.",
+        result: "+25% ROAS improvement, 40% lower cost per acquisition",
+        products: ["Performance Max", "Shopping", "Dynamic Remarketing"]
+      },
+      {
+        company: "BarkBox",
+        industry: "Subscription / Pet Products",
+        problem: "Scaling subscriber acquisition beyond branded search while keeping CPA targets sustainable.",
+        solution: "Layered **in-market audiences** on top of non-brand search campaigns. Used **Target CPA bidding** with micro-conversions (trial sign-ups) to feed the algorithm more data.",
+        result: "3x non-brand conversion volume, CPA reduced by 18%",
+        products: ["Search", "Smart Bidding", "Audience Targeting"]
+      },
+      {
+        company: "Lemonade Insurance",
+        industry: "InsurTech / Financial Services",
+        problem: "Competing against established insurance brands with massive budgets in highly competitive keyword auctions.",
+        solution: "Focused on **long-tail keywords** and niche segments (renters insurance for millennials). Used **Responsive Search Ads** with benefit-focused messaging and comparison landing pages.",
+        result: "50% lower CPC than industry average, 2.5x higher CTR",
+        products: ["Search", "RSA", "Landing Page Optimization"]
+      }
+    ]
+  },
+  {
+    region: "Europe",
+    cases: [
+      {
+        company: "Zalando",
+        industry: "Fashion E-commerce",
+        problem: "Managing ad campaigns across 25+ European markets with different languages, currencies, and consumer behaviors.",
+        solution: "Built **feed-based Shopping campaigns** with automated rules per market. Used **custom labels** to segment products by margin, season, and performance tier.",
+        result: "+35% revenue from Shopping, 20% improvement in ROAS across markets",
+        products: ["Shopping", "Performance Max", "Feed Management"]
+      },
+      {
+        company: "Booking.com",
+        industry: "Travel / Hospitality",
+        problem: "Capturing demand across thousands of destination keywords while maintaining profitability with thin margins per booking.",
+        solution: "Deployed **automated bidding** with portfolio strategies across destination-grouped campaigns. Used **RLSA** to bid more aggressively on users who previously searched for the same destination.",
+        result: "15% increase in bookings, 22% better ROAS on returning visitors",
+        products: ["Search", "RLSA", "Portfolio Bidding"]
+      },
+      {
+        company: "Gymshark",
+        industry: "Fitness / Apparel",
+        problem: "Transitioning from social-media-only advertising to a diversified acquisition strategy with measurable ROAS.",
+        solution: "Launched **YouTube action campaigns** targeting fitness enthusiasts with creator-style video ads. Combined with **Performance Max** to capture search and shopping demand.",
+        result: "4.5x ROAS on YouTube campaigns, 30% of new customer acquisition from Google",
+        products: ["YouTube Ads", "Performance Max", "Video Action"]
+      }
+    ]
+  },
+  {
+    region: "Asia Pacific",
+    cases: [
+      {
+        company: "Tokopedia",
+        industry: "Marketplace / E-commerce",
+        problem: "Driving app installs at scale across Indonesia's diverse mobile ecosystem with varying device capabilities.",
+        solution: "Used **App campaigns** with deep linking to specific product categories. Optimized creative assets for low-bandwidth environments and leveraged **in-app conversion events** for bidding.",
+        result: "60% reduction in cost per install, 3x increase in in-app purchases",
+        products: ["App Campaigns", "Deep Linking", "Conversion Optimization"]
+      },
+      {
+        company: "Nykaa",
+        industry: "Beauty / E-commerce",
+        problem: "Competing with global beauty brands in India's fast-growing online beauty market with limited brand awareness.",
+        solution: "Combined **brand Search campaigns** with **YouTube bumper ads** for awareness. Used **customer match** to re-engage past buyers for new product launches.",
+        result: "+80% brand search volume, 45% repeat purchase rate from remarketing",
+        products: ["Search", "YouTube Bumper", "Customer Match"]
+      },
+      {
+        company: "Grab",
+        industry: "Super App / Ride-hailing",
+        problem: "Acquiring new users across Southeast Asia's fragmented markets (Singapore, Malaysia, Vietnam, Philippines, Thailand, Indonesia).",
+        solution: "Ran **localized App campaigns** per market with language-specific creative. Used **geo-targeting** with bid adjustments for high-density urban areas where ride demand peaks.",
+        result: "40% lower CPI across SEA markets, 2x improvement in 7-day retention",
+        products: ["App Campaigns", "Geo-Targeting", "Smart Bidding"]
+      }
+    ]
+  },
+  {
+    region: "Middle East & Africa",
+    cases: [
+      {
+        company: "Noon",
+        industry: "E-commerce / Marketplace",
+        problem: "Building an e-commerce brand in the UAE and Saudi Arabia against Amazon (Souq) dominance with limited digital advertising history.",
+        solution: "Invested heavily in **brand Search campaigns** to capture growing brand interest. Used **Shopping ads** with Arabic and English product feeds. Implemented **Ramadan seasonal strategies** with countdown ads.",
+        result: "+120% brand search growth YoY, 50% of new customers from Google",
+        products: ["Brand Search", "Shopping", "Seasonal Campaigns"]
+      },
+      {
+        company: "Jumia",
+        industry: "E-commerce / Africa",
+        problem: "Reaching consumers across 11 African countries with limited internet penetration and mobile-first browsing.",
+        solution: "Optimized for **lightweight landing pages** (under 500KB). Used **call-only ads** for markets where phone orders outperform online checkout. Targeted **mobile-only** with reduced bids on desktop.",
+        result: "3x mobile conversion rate, 35% reduction in bounce rate",
+        products: ["Call Ads", "Mobile Optimization", "Display"]
+      }
+    ]
+  },
+  {
+    region: "Latin America",
+    cases: [
+      {
+        company: "Mercado Libre",
+        industry: "E-commerce / Marketplace",
+        problem: "Driving seller acquisition and buyer engagement across diverse Latin American markets with different payment ecosystems.",
+        solution: "Ran **separate campaigns per country** (Brazil, Mexico, Argentina, Colombia) with localized messaging. Used **lead gen extensions** for seller sign-ups and **Shopping** for buyer acquisition.",
+        result: "+45% seller sign-ups from Google, 28% increase in buyer GMV",
+        products: ["Lead Extensions", "Shopping", "Localized Search"]
+      },
+      {
+        company: "Rappi",
+        industry: "Delivery / Super App",
+        problem: "Competing with UberEats and iFood for delivery app dominance in Colombia, Mexico, and Brazil.",
+        solution: "Used **App campaigns** with promotional creative (first-order discounts). Implemented **conversion value rules** to bid higher for users in underserved delivery zones with less competition.",
+        result: "55% lower cost per first order, expanded to 15 new cities profitably",
+        products: ["App Campaigns", "Conversion Value Rules", "Geo-Targeting"]
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title="Solutions" wide={true}>
+  <section class="text-center py-8 mb-8">
+    <h1 class="text-3xl font-bold tracking-tight text-[var(--color-text)] mb-3">How We Solve Partner Problems</h1>
+    <p class="text-[var(--color-text-muted)] max-w-lg mx-auto">
+      Real-world Google Ads solutions from every region. See how businesses tackle their biggest growth challenges.
+    </p>
+  </section>
+
+  <!-- Region tabs -->
+  <div class="flex flex-wrap gap-2 justify-center mb-10">
+    {solutions.map((s, i) => (
+      <button class:list={["region-tab", i === 0 ? "active" : ""]} data-region={s.region}>{s.region}</button>
+    ))}
+  </div>
+
+  <!-- Solution cards by region -->
+  {solutions.map((s, i) => (
+    <div class:list={["region-section", i === 0 ? "" : "hidden"]} data-region={s.region}>
+      <div class="space-y-6 max-w-4xl mx-auto">
+        {s.cases.map(c => (
+          <div class="solution-card">
+            <div class="solution-header">
+              <div>
+                <h3 class="text-lg font-semibold text-[var(--color-text)]">{c.company}</h3>
+                <span class="text-xs text-[var(--color-text-muted)]">{c.industry}</span>
+              </div>
+              <span class="result-badge">{c.result}</span>
+            </div>
+
+            <div class="solution-body">
+              <div class="solution-section">
+                <span class="solution-label problem-label">Problem</span>
+                <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">{c.problem}</p>
+              </div>
+              <div class="solution-section">
+                <span class="solution-label solution-label-green">Solution</span>
+                <p class="text-sm text-[var(--color-text)] leading-relaxed" set:html={c.solution.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+              </div>
+            </div>
+
+            <div class="solution-products">
+              {c.products.map(p => (
+                <span class="product-tag">{p}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+</BaseLayout>
+
+<style>
+  .region-tab {
+    padding: 0.4rem 1rem; border-radius: 100px;
+    font-size: 0.82rem; font-weight: 500; cursor: pointer;
+    border: 1px solid var(--color-border); background: #fff;
+    color: var(--color-text-muted); transition: all 0.15s;
+    font-family: var(--font-sans);
+  }
+  .region-tab:hover, .region-tab.active {
+    background: #e8f0fe; color: #1a73e8; border-color: #1a73e8;
+  }
+
+  .solution-card {
+    border: 1px solid var(--color-border); border-radius: 16px;
+    padding: 1.5rem; background: #fff;
+    transition: border-color 0.15s;
+  }
+  .solution-card:hover { border-color: var(--color-google-blue); }
+
+  .solution-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 1.25rem; gap: 1rem; flex-wrap: wrap;
+  }
+  .result-badge {
+    font-size: 0.75rem; font-weight: 600;
+    color: #137333; background: #e6f4ea;
+    padding: 0.25rem 0.75rem; border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  .solution-body {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 640px) {
+    .solution-body { grid-template-columns: 1fr; }
+  }
+
+  .solution-section { padding: 1rem; background: var(--color-bg-subtle); border-radius: 10px; }
+  .solution-label {
+    display: inline-block; font-size: 0.65rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    padding: 0.1rem 0.5rem; border-radius: 4px; margin-bottom: 0.5rem;
+  }
+  .problem-label { color: #a50e0e; background: #fce8e6; }
+  .solution-label-green { color: #137333; background: #e6f4ea; }
+
+  .solution-products { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .product-tag {
+    font-size: 0.7rem; font-weight: 500;
+    color: #1a73e8; background: #e8f0fe;
+    padding: 0.2rem 0.6rem; border-radius: 100px;
+  }
+
+  .hidden { display: none; }
+</style>
+
+<script>
+  document.querySelectorAll('.region-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.region-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const region = (tab as HTMLElement).dataset.region;
+      document.querySelectorAll('.region-section').forEach(s => {
+        (s as HTMLElement).classList.toggle('hidden', (s as HTMLElement).dataset.region !== region);
+      });
+    });
+  });
+</script>
