@@ -37,7 +37,11 @@ function parseXML(text: string): NewsItem[] {
         link: link.trim(),
         source: '',
         date: pubDate ? new Date(pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : '',
-        snippet: desc.replace(/<[^>]*>/g, '').trim().slice(0, 200),
+        snippet: desc
+          .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+          .replace(/<[^>]*>/g, '')
+          .trim()
+          .slice(0, 200),
       });
     }
   }
