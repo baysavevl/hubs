@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Learn about Google Ads" wide={true}>
+  <section class="text-center py-12">
+    <div class="google-bar mx-auto mb-6" style="max-width:80px"><span></span><span></span><span></span><span></span></div>
+    <h1 class="text-4xl font-bold tracking-tight text-[var(--color-text)] mb-4">
+      Learn about <span class="bg-gradient-to-r from-[#4285f4] to-[#34a853] bg-clip-text text-transparent">Google Ads</span>
+    </h1>
+    <p class="text-lg text-[var(--color-text-muted)] max-w-xl mx-auto leading-relaxed">
+      Everything you need to master Google Ads — from beginner guides to advanced strategies.
+    </p>
+  </section>
+
+  <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+    <a href={`${base}projects`} class="learn-card">
+      <div class="learn-icon">📖</div>
+      <h2 class="text-xl font-semibold mb-2">Knowledge Base</h2>
+      <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
+        Comprehensive guides on Google Ads setup, technical implementation, and business strategy.
+      </p>
+      <span class="learn-link">Explore guides &rarr;</span>
+    </a>
+
+    <a href={`${base}tips-and-tricks`} class="learn-card">
+      <div class="learn-icon">💡</div>
+      <h2 class="text-xl font-semibold mb-2">Tips & Tricks</h2>
+      <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
+        Practical advice on bidding, ad copy, quality score, targeting, and budget optimization.
+      </p>
+      <span class="learn-link">Read tips &rarr;</span>
+    </a>
+
+    <a href={`${base}success-story`} class="learn-card">
+      <div class="learn-icon">🌏</div>
+      <h2 class="text-xl font-semibold mb-2">Success Stories</h2>
+      <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
+        Real case studies from Southeast Asia — see how businesses grew with Google Ads.
+      </p>
+      <span class="learn-link">View stories &rarr;</span>
+    </a>
+
+    <a href={`${base}news`} class="learn-card">
+      <div class="learn-icon">📰</div>
+      <h2 class="text-xl font-semibold mb-2">News</h2>
+      <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
+        Latest updates from the Google Ads blog, product announcements, and industry news.
+      </p>
+      <span class="learn-link">Read news &rarr;</span>
+    </a>
+  </div>
+</BaseLayout>
+
+<style>
+  .google-bar { display:flex; height:4px; border-radius:2px; overflow:hidden; }
+  .google-bar span { flex:1; }
+  .google-bar span:nth-child(1) { background:var(--color-google-blue); }
+  .google-bar span:nth-child(2) { background:var(--color-google-red); }
+  .google-bar span:nth-child(3) { background:var(--color-google-yellow); }
+  .google-bar span:nth-child(4) { background:var(--color-google-green); }
+  .learn-card {
+    display: block; padding: 2rem;
+    border: 1px solid var(--color-border); border-radius: 16px;
+    text-decoration: none; transition: border-color 0.15s, box-shadow 0.2s, transform 0.2s;
+    background: #fff;
+  }
+  .learn-card:hover {
+    border-color: var(--color-google-blue);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+  }
+  .learn-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .learn-card h2 { color: var(--color-text); }
+  .learn-link {
+    display: inline-block; margin-top: 0.75rem;
+    font-size: 0.85rem; font-weight: 500; color: var(--color-google-blue);
+  }
+</style>

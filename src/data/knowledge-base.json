@@ -11613,5 +11613,187 @@
         "url": "/google-mindful-solution-architect/projects/google-ads/"
       }
     ]
+  },
+  {
+    "id": "step-create-account",
+    "keywords": [
+      "create account",
+      "sign up",
+      "new account",
+      "get started",
+      "register google ads"
+    ],
+    "category": "step-by-step",
+    "question": "How do I create a Google Ads account step by step?",
+    "answer": "**Step 1:** Go to ads.google.com and click 'Start Now'.\n**Step 2:** Sign in with your Google account (or create one).\n**Step 3:** Choose your main advertising goal (sales, leads, or website traffic).\n**Step 4:** Enter your business name and website URL.\n**Step 5:** Set your target location and language.\n**Step 6:** Add your billing information (credit card or bank account).\n**Step 7:** Your account is ready — you can now create your first campaign.",
+    "links": [
+      {
+        "text": "Complete Setup Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "step-first-search-campaign",
+    "keywords": [
+      "first campaign",
+      "create campaign",
+      "search campaign setup",
+      "step by step campaign"
+    ],
+    "category": "step-by-step",
+    "question": "How do I set up my first Search campaign step by step?",
+    "answer": "**Step 1:** Click '+ New Campaign' and select your goal (Sales or Leads).\n**Step 2:** Choose 'Search' as the campaign type.\n**Step 3:** Name your campaign and set your daily budget (start with $10-20/day).\n**Step 4:** Choose your bidding strategy — use **Maximize Clicks** to start.\n**Step 5:** Set your target locations and language.\n**Step 6:** Create an ad group and add 10-15 keywords (use phrase and exact match).\n**Step 7:** Write your Responsive Search Ad — add 10+ headlines and 4 descriptions.\n**Step 8:** Add sitelink, callout, and structured snippet extensions.\n**Step 9:** Review and launch. Monitor daily for the first 2 weeks.",
+    "links": [
+      {
+        "text": "First Campaign Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "step-conversion-tracking",
+    "keywords": [
+      "set up conversion tracking",
+      "install tracking",
+      "conversion setup",
+      "track conversions step by step"
+    ],
+    "category": "step-by-step",
+    "question": "How do I set up conversion tracking step by step?",
+    "answer": "**Step 1:** Go to Tools & Settings > Measurement > Conversions.\n**Step 2:** Click '+ New conversion action' and choose your source (Website, App, Phone calls, or Import).\n**Step 3:** For website: enter your URL and scan for auto-detected events, or set up manually.\n**Step 4:** Configure the conversion: name it, set the value, and choose the counting method (One or Every).\n**Step 5:** Choose your attribution model (Data-driven is recommended).\n**Step 6:** Install the **Google tag** on your website — either directly in the HTML `<head>` or via Google Tag Manager.\n**Step 7:** Test by triggering a conversion and checking the 'Status' column (may take up to 24 hours).",
+    "links": [
+      {
+        "text": "Tracking Guide",
+        "url": "/google-mindful-solution-architect/projects/technical/"
+      }
+    ]
+  },
+  {
+    "id": "step-keyword-research",
+    "keywords": [
+      "keyword research",
+      "find keywords",
+      "keyword planner",
+      "choose keywords step by step"
+    ],
+    "category": "step-by-step",
+    "question": "How do I do keyword research step by step?",
+    "answer": "**Step 1:** Open **Keyword Planner** (Tools > Planning > Keyword Planner).\n**Step 2:** Click 'Discover new keywords' and enter your product/service terms.\n**Step 3:** Review the results — look for keywords with decent volume (100+/month) and manageable competition.\n**Step 4:** Filter by relevance — remove broad/irrelevant terms.\n**Step 5:** Group similar keywords into themes (each theme = one ad group).\n**Step 6:** Choose match types: **exact match** [keyword] for high intent, **phrase match** \"keyword\" for moderate reach.\n**Step 7:** Add negative keywords to block irrelevant searches (e.g., 'free', 'jobs', 'DIY').\n**Step 8:** Export your keyword plan and add to your campaign.",
+    "links": [
+      {
+        "text": "Keyword Strategy Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "step-rsa-creation",
+    "keywords": [
+      "create ad",
+      "write ad",
+      "responsive search ad",
+      "RSA step by step",
+      "ad creation"
+    ],
+    "category": "step-by-step",
+    "question": "How do I create a Responsive Search Ad step by step?",
+    "answer": "**Step 1:** Go to your ad group and click '+ New ad' > Responsive Search Ad.\n**Step 2:** Enter your **final URL** (the landing page users will visit).\n**Step 3:** Add the display path (e.g., yoursite.com/google-ads/services).\n**Step 4:** Write at least **10 headlines** (30 characters each) — include your keyword, benefits, numbers, and CTAs.\n**Step 5:** Write **4 descriptions** (90 characters each) — expand on your value proposition and include a call to action.\n**Step 6:** **Pin** your most important headline to Position 1 (but leave most unpinned for Google to optimize).\n**Step 7:** Check the **Ad Strength** indicator — aim for 'Good' or 'Excellent'.\n**Step 8:** Save and let it run for 2-4 weeks before judging performance.",
+    "links": [
+      {
+        "text": "Ad Copy Guide",
+        "url": "/google-mindful-solution-architect/tips-and-tricks/ad-copy-best-practices/"
+      }
+    ]
+  },
+  {
+    "id": "step-gtm-setup",
+    "keywords": [
+      "google tag manager",
+      "GTM setup",
+      "install GTM",
+      "tag manager step by step"
+    ],
+    "category": "step-by-step",
+    "question": "How do I set up Google Tag Manager step by step?",
+    "answer": "**Step 1:** Go to tagmanager.google.com and create an account.\n**Step 2:** Create a **container** for your website (choose 'Web' as target platform).\n**Step 3:** Copy the two code snippets GTM gives you.\n**Step 4:** Paste the first snippet in the `<head>` of every page, and the second after the opening `<body>` tag.\n**Step 5:** In GTM, create a new **Tag** — choose 'Google Ads Conversion Tracking'.\n**Step 6:** Enter your Conversion ID and Conversion Label from Google Ads.\n**Step 7:** Set the **Trigger** — e.g., 'Form Submission' or 'Page View' on your thank-you page.\n**Step 8:** Click **Preview** to test, then **Submit** to publish.",
+    "links": [
+      {
+        "text": "Technical Guide",
+        "url": "/google-mindful-solution-architect/projects/technical/"
+      }
+    ]
+  },
+  {
+    "id": "step-remarketing-setup",
+    "keywords": [
+      "set up remarketing",
+      "remarketing step by step",
+      "retargeting setup",
+      "audience creation"
+    ],
+    "category": "step-by-step",
+    "question": "How do I set up remarketing step by step?",
+    "answer": "**Step 1:** Ensure your **Google Ads tag** is installed on all pages of your website.\n**Step 2:** Go to Tools > Shared Library > Audience Manager.\n**Step 3:** Click '+ New audience' and choose 'Website visitors'.\n**Step 4:** Define your audience rules — e.g., 'Visited any page in the last 30 days' or 'Visited product page but not thank-you page'.\n**Step 5:** Name your audience and set the membership duration (30 days for most products, 90 for high-consideration).\n**Step 6:** Create a new **Display** or **Search** campaign.\n**Step 7:** In the audience targeting section, select your remarketing list.\n**Step 8:** Create tailored ads that speak to returning visitors (offer a discount, remind of benefits).\n**Step 9:** Set a frequency cap (3-5 impressions per user per day) to avoid ad fatigue.",
+    "links": [
+      {
+        "text": "Remarketing Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "step-ga4-link",
+    "keywords": [
+      "link GA4",
+      "connect analytics",
+      "GA4 google ads",
+      "analytics linking step by step"
+    ],
+    "category": "step-by-step",
+    "question": "How do I link Google Analytics 4 to Google Ads step by step?",
+    "answer": "**Step 1:** Sign in to Google Analytics 4.\n**Step 2:** Go to Admin > Product Links > Google Ads Links.\n**Step 3:** Click 'Link' and select your Google Ads account.\n**Step 4:** Enable **auto-tagging** (recommended) and personalized advertising.\n**Step 5:** Click 'Submit' to create the link.\n**Step 6:** In Google Ads, go to Tools > Measurement > Conversions.\n**Step 7:** Click '+ New conversion action' > Import > Google Analytics 4.\n**Step 8:** Select the GA4 events you want to import as conversions (e.g., purchase, form_submit).\n**Step 9:** Verify data is flowing — check the Campaigns report in GA4 for Google Ads traffic.",
+    "links": [
+      {
+        "text": "GA4 Integration Guide",
+        "url": "/google-mindful-solution-architect/projects/technical/"
+      }
+    ]
+  },
+  {
+    "id": "step-pmax-setup",
+    "keywords": [
+      "performance max setup",
+      "pmax step by step",
+      "create pmax campaign",
+      "performance max campaign"
+    ],
+    "category": "step-by-step",
+    "question": "How do I set up a Performance Max campaign step by step?",
+    "answer": "**Step 1:** Click '+ New Campaign' and select Sales or Leads as your goal.\n**Step 2:** Choose **Performance Max** as the campaign type.\n**Step 3:** Set your daily budget and bidding strategy (Target CPA or Maximize Conversions).\n**Step 4:** Set your target locations and languages.\n**Step 5:** Create an **Asset Group** — add your final URL, images (at least 5), logos, videos, headlines (5+), long headlines (5+), and descriptions (5+).\n**Step 6:** Add **Audience Signals** — your remarketing lists, custom segments, and in-market audiences. These guide Google's AI but don't restrict targeting.\n**Step 7:** If you have a product feed, link your **Merchant Center** account.\n**Step 8:** Review and launch. Allow 2-4 weeks for the learning period.\n**Step 9:** Check the **Insights** tab regularly to see which audiences and search themes are driving results.",
+    "links": [
+      {
+        "text": "PMax Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
+  },
+  {
+    "id": "step-shopping-setup",
+    "keywords": [
+      "shopping campaign setup",
+      "merchant center",
+      "product feed",
+      "google shopping step by step"
+    ],
+    "category": "step-by-step",
+    "question": "How do I set up Google Shopping step by step?",
+    "answer": "**Step 1:** Create a **Google Merchant Center** account at merchants.google.com.\n**Step 2:** Verify and claim your website URL.\n**Step 3:** Create your **product feed** — a spreadsheet or API with product titles, descriptions, prices, images, availability, and GTINs.\n**Step 4:** Upload the feed to Merchant Center (manual, scheduled fetch, or Content API).\n**Step 5:** Fix any feed errors or warnings in the Diagnostics tab.\n**Step 6:** Link your Merchant Center to your Google Ads account.\n**Step 7:** In Google Ads, create a new **Shopping** campaign (or use Performance Max with a feed).\n**Step 8:** Set your budget, bidding strategy, and target locations.\n**Step 9:** Organize products into **product groups** by category, brand, or custom labels for bid control.",
+    "links": [
+      {
+        "text": "Shopping Guide",
+        "url": "/google-mindful-solution-architect/projects/google-ads/"
+      }
+    ]
   }
 ]
