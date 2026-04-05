@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
+    "@astrojs/vercel": "^9.0.5",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^5.17.1",
     "leaflet": "^1.9.4",

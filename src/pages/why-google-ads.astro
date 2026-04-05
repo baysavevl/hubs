@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Why Google Ads" wide={true}>
+  <!-- Hero -->
+  <section class="text-center py-12">
+    <div class="google-bar mx-auto mb-6" style="max-width:80px"><span></span><span></span><span></span><span></span></div>
+    <h1 class="text-4xl font-bold tracking-tight text-[var(--color-text)] mb-4">
+      Why <span class="bg-gradient-to-r from-[#4285f4] to-[#34a853] bg-clip-text text-transparent">Google Ads</span>?
+    </h1>
+    <p class="text-lg text-[var(--color-text-muted)] max-w-xl mx-auto leading-relaxed">
+      Reach the right customers at the right moment. Google Ads puts your business in front of billions of daily searches.
+    </p>
+  </section>
+
+  <!-- Stats -->
+  <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+    <div class="text-center p-6 bg-[var(--color-bg-subtle)] rounded-xl border border-[var(--color-border)]">
+      <div class="text-3xl font-bold text-[var(--color-google-blue)]">8.5B+</div>
+      <div class="text-sm text-[var(--color-text-muted)] mt-1">Daily Google searches</div>
+    </div>
+    <div class="text-center p-6 bg-[var(--color-bg-subtle)] rounded-xl border border-[var(--color-border)]">
+      <div class="text-3xl font-bold text-[var(--color-google-red)]">200%</div>
+      <div class="text-sm text-[var(--color-text-muted)] mt-1">Average ROI on Google Ads</div>
+    </div>
+    <div class="text-center p-6 bg-[var(--color-bg-subtle)] rounded-xl border border-[var(--color-border)]">
+      <div class="text-3xl font-bold text-[var(--color-google-yellow)]">80%</div>
+      <div class="text-sm text-[var(--color-text-muted)] mt-1">Of businesses use PPC</div>
+    </div>
+    <div class="text-center p-6 bg-[var(--color-bg-subtle)] rounded-xl border border-[var(--color-border)]">
+      <div class="text-3xl font-bold text-[var(--color-google-green)]">65%</div>
+      <div class="text-sm text-[var(--color-text-muted)] mt-1">Click rate on purchase-intent queries</div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold mb-8 text-center">The Value of Google Ads for Your Business</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-6 border border-[var(--color-border)] rounded-xl">
+        <div class="text-2xl mb-3">🎯</div>
+        <h3 class="text-lg font-semibold mb-2">Intent-Based Targeting</h3>
+        <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">Unlike social media ads, Google Ads targets people actively searching for your products or services. This means higher conversion rates because you're reaching customers with purchase intent.</p>
+      </div>
+      <div class="p-6 border border-[var(--color-border)] rounded-xl">
+        <div class="text-2xl mb-3">📊</div>
+        <h3 class="text-lg font-semibold mb-2">Measurable Results</h3>
+        <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">Every click, impression, and conversion is tracked. You know exactly what your ad spend produces — no guesswork. Integrate with Google Analytics for full-funnel visibility.</p>
+      </div>
+      <div class="p-6 border border-[var(--color-border)] rounded-xl">
+        <div class="text-2xl mb-3">💰</div>
+        <h3 class="text-lg font-semibold mb-2">Budget Control</h3>
+        <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">Set daily budgets and bid caps. Only pay when someone clicks (PPC). No minimum spend requirements. Scale up or down anytime based on performance.</p>
+      </div>
+      <div class="p-6 border border-[var(--color-border)] rounded-xl">
+        <div class="text-2xl mb-3">⚡</div>
+        <h3 class="text-lg font-semibold mb-2">Immediate Visibility</h3>
+        <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">While SEO takes months, Google Ads puts you at the top of search results within hours. Ideal for new product launches, seasonal promotions, or competitive markets.</p>
+      </div>
+      <div class="p-6 border border-[var(--color-border)] rounded-xl">
+        <div class="text-2xl mb-3">🌍</div>
+        <h3 class="text-lg font-semibold mb-2">Global & Local Reach</h3>
+        <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">Target by country, city, radius, or even specific zip codes. Run multilingual campaigns across Southeast Asia or focus on a single neighborhood.</p>
+      </div>
+      <div class="p-6 border border-[var(--color-border)] rounded-xl">
+        <div class="text-2xl mb-3">🔄</div>
+        <h3 class="text-lg font-semibold mb-2">Remarketing Power</h3>
+        <p class="text-[var(--color-text-muted)] text-sm leading-relaxed">Re-engage visitors who didn't convert. Show targeted ads across Google Display Network, YouTube, and Gmail to bring them back and close the sale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Ads vs Traditional -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold mb-6 text-center">Google Ads vs Traditional Advertising</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-[var(--color-google-blue)] text-white">
+            <th class="p-3 text-left rounded-tl-lg">Feature</th>
+            <th class="p-3 text-left">Google Ads</th>
+            <th class="p-3 text-left rounded-tr-lg">Traditional (TV/Print/Radio)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-[var(--color-border)]">
+            <td class="p-3 font-medium">Targeting</td>
+            <td class="p-3 text-[var(--color-google-green)]">Precise — keywords, demographics, intent</td>
+            <td class="p-3 text-[var(--color-text-muted)]">Broad — mass audience</td>
+          </tr>
+          <tr class="border-b border-[var(--color-border)]">
+            <td class="p-3 font-medium">Measurement</td>
+            <td class="p-3 text-[var(--color-google-green)]">Real-time analytics, conversion tracking</td>
+            <td class="p-3 text-[var(--color-text-muted)]">Estimated reach, surveys</td>
+          </tr>
+          <tr class="border-b border-[var(--color-border)]">
+            <td class="p-3 font-medium">Cost Model</td>
+            <td class="p-3 text-[var(--color-google-green)]">Pay per click/conversion</td>
+            <td class="p-3 text-[var(--color-text-muted)]">Fixed upfront cost</td>
+          </tr>
+          <tr class="border-b border-[var(--color-border)]">
+            <td class="p-3 font-medium">Speed</td>
+            <td class="p-3 text-[var(--color-google-green)]">Live in hours</td>
+            <td class="p-3 text-[var(--color-text-muted)]">Weeks to months</td>
+          </tr>
+          <tr>
+            <td class="p-3 font-medium">Flexibility</td>
+            <td class="p-3 text-[var(--color-google-green)]">Adjust anytime</td>
+            <td class="p-3 text-[var(--color-text-muted)]">Locked-in commitment</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="text-center py-12 bg-[var(--color-bg-subtle)] rounded-2xl border border-[var(--color-border)] mb-8">
+    <h2 class="text-2xl font-bold mb-3">Ready to Grow with Google Ads?</h2>
+    <p class="text-[var(--color-text-muted)] mb-6 max-w-md mx-auto">
+      Let our Solutions Architect team help you plan, launch, and optimize your campaigns.
+    </p>
+    <a href={`${base}let-us-help`} class="inline-block bg-[var(--color-google-blue)] text-white px-8 py-3 rounded-full font-semibold text-sm hover:bg-[#1557b0] transition-colors">
+      Get Started
+    </a>
+  </section>
+</BaseLayout>
+
+<style>
+  .google-bar { display:flex; height:4px; border-radius:2px; overflow:hidden; }
+  .google-bar span { flex:1; }
+  .google-bar span:nth-child(1) { background:var(--color-google-blue); }
+  .google-bar span:nth-child(2) { background:var(--color-google-red); }
+  .google-bar span:nth-child(3) { background:var(--color-google-yellow); }
+  .google-bar span:nth-child(4) { background:var(--color-google-green); }
+</style>

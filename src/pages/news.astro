@@ -1,0 +1,65 @@
+---
+export const prerender = false;
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { fetchNews } from "../lib/feed-fetcher";
+
+let news: any[] = [];
+let error = false;
+
+try {
+  news = await fetchNews();
+} catch {
+  error = true;
+}
+---
+
+<BaseLayout title="News" wide={true}>
+  <section class="text-center py-8 mb-8">
+    <h1 class="text-3xl font-bold tracking-tight text-[var(--color-text)] mb-3">Google Ads News</h1>
+    <p class="text-[var(--color-text-muted)] max-w-lg mx-auto">
+      Latest updates from Google Ads blog, announcements, and community.
+    </p>
+  </section>
+
+  {error || news.length === 0 ? (
+    <div class="text-center py-16 text-[var(--color-text-muted)]">
+      <p class="text-lg mb-2">Unable to load news right now.</p>
+      <p class="text-sm">Please try again later. News is fetched from official Google feeds.</p>
+    </div>
+  ) : (
+    <div class="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+      {news.map((item) => (
+        <a href={item.link} target="_blank" rel="noopener noreferrer" class="news-card">
+          <span class="news-source">{item.source}</span>
+          <h3 class="text-base font-semibold text-[var(--color-text)] mt-2 mb-2 leading-snug">{item.title}</h3>
+          {item.snippet && (
+            <p class="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">{item.snippet}</p>
+          )}
+          {item.date && (
+            <time class="text-xs text-[var(--color-text-muted)]">{item.date}</time>
+          )}
+        </a>
+      ))}
+    </div>
+  )}
+</BaseLayout>
+
+<style>
+  .news-card {
+    display: block; padding: 1.25rem 1.5rem;
+    border: 1px solid var(--color-border); border-radius: 12px;
+    text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s;
+    background: #fff;
+  }
+  .news-card:hover {
+    border-color: var(--color-google-blue);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .news-source {
+    display: inline-block; font-size: 0.7rem; font-weight: 600;
+    color: var(--color-google-green); background: #e6f4ea;
+    padding: 0.15rem 0.55rem; border-radius: 100px;
+    text-transform: uppercase; letter-spacing: 0.03em;
+  }
+</style>

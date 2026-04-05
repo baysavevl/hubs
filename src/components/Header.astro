@@ -21,17 +21,31 @@ function isActive(path: string) {
         Google Ads Solutions Architect
       </span>
     </a>
-    <div class="flex gap-5 text-sm font-medium">
+    <button class="nav-toggle md:hidden" id="nav-toggle" aria-label="Toggle menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="nav-links">
       <a
         href={base}
         class:list={[
           "transition-colors",
-          isActive(base) && !isActive(`${base}projects`) && !isActive(`${base}success-story`) && !isActive(`${base}let-us-help`)
+          isActive(base) && !isActive(`${base}why-google-ads`) && !isActive(`${base}projects`) && !isActive(`${base}tips-and-tricks`) && !isActive(`${base}success-story`) && !isActive(`${base}news`) && !isActive(`${base}let-us-help`)
             ? "text-[var(--color-google-blue)]"
             : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]",
         ]}
       >
         Home
+      </a>
+      <a
+        href={`${base}why-google-ads`}
+        class:list={[
+          "transition-colors",
+          isActive(`${base}why-google-ads`)
+            ? "text-[var(--color-google-blue)]"
+            : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]",
+        ]}
+      >
+        Why Google Ads
       </a>
       <a
         href={`${base}projects`}
@@ -45,6 +59,17 @@ function isActive(path: string) {
         Knowledge Base
       </a>
       <a
+        href={`${base}tips-and-tricks`}
+        class:list={[
+          "transition-colors",
+          isActive(`${base}tips-and-tricks`)
+            ? "text-[var(--color-google-blue)]"
+            : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]",
+        ]}
+      >
+        Tips & Tricks
+      </a>
+      <a
         href={`${base}success-story`}
         class:list={[
           "transition-colors",
@@ -54,6 +79,17 @@ function isActive(path: string) {
         ]}
       >
         Success Stories
+      </a>
+      <a
+        href={`${base}news`}
+        class:list={[
+          "transition-colors",
+          isActive(`${base}news`)
+            ? "text-[var(--color-google-blue)]"
+            : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]",
+        ]}
+      >
+        News
       </a>
       <a
         href={`${base}let-us-help`}
@@ -69,3 +105,26 @@ function isActive(path: string) {
     </div>
   </nav>
 </header>
+
+<style>
+  .nav-toggle { display: none; background: none; border: none; color: var(--color-text); cursor: pointer; padding: 0.25rem; }
+  .nav-links { display: flex; gap: 1.25rem; text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+
+  @media (max-width: 768px) {
+    .nav-toggle { display: flex; align-items: center; }
+    .nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; background: white; border-bottom: 1px solid var(--color-border);
+      padding: 0.75rem 1.5rem; gap: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 0.4rem 0; }
+  }
+</style>
+
+<script>
+  document.getElementById('nav-toggle')?.addEventListener('click', () => {
+    document.getElementById('nav-links')?.classList.toggle('open');
+  });
+</script>

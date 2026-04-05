@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const tips = await getCollection("tips");
+  return tips.map((tip) => ({ params: { id: tip.id }, props: { tip } }));
+}
+
+const { tip } = Astro.props;
+const { Content } = await render(tip);
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title={tip.data.title}>
+  <a href={`${base}tips-and-tricks`} class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-google-blue)] mb-6 inline-block">
+    &larr; Back to Tips & Tricks
+  </a>
+
+  <article>
+    <header class="mb-8">
+      <span class="inline-block text-xs font-semibold text-[#1a73e8] bg-[#e8f0fe] px-3 py-1 rounded-full uppercase tracking-wide mb-3">
+        {tip.data.category}
+      </span>
+      <h1 class="text-3xl font-bold tracking-tight text-[var(--color-text)] mb-3">{tip.data.title}</h1>
+      <p class="text-[var(--color-text-muted)]">{tip.data.description}</p>
+      <time class="text-sm text-[var(--color-text-muted)] mt-2 block">
+        {tip.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </time>
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

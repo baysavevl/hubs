@@ -1,0 +1,83 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL;
+const tips = await getCollection("tips");
+const sorted = tips.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categories = [...new Set(sorted.map(t => t.data.category))];
+---
+
+<BaseLayout title="Tips & Tricks" wide={true}>
+  <section class="text-center py-8 mb-8">
+    <h1 class="text-3xl font-bold tracking-tight text-[var(--color-text)] mb-3">Tips & Tricks</h1>
+    <p class="text-[var(--color-text-muted)] max-w-lg mx-auto">
+      Practical advice to get more from your Google Ads campaigns.
+    </p>
+  </section>
+
+  <!-- Category filter -->
+  <div class="flex flex-wrap gap-2 justify-center mb-8">
+    <button class="cat-btn active" data-cat="all">All</button>
+    {categories.map(cat => (
+      <button class="cat-btn" data-cat={cat}>{cat}</button>
+    ))}
+  </div>
+
+  <!-- Tips grid -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" id="tips-grid">
+    {sorted.map(tip => (
+      <a href={`${base}tips-and-tricks/${tip.id}`} class="tip-card" data-cat={tip.data.category}>
+        <span class="tip-category">{tip.data.category}</span>
+        <h3 class="text-base font-semibold text-[var(--color-text)] mt-2 mb-2">{tip.data.title}</h3>
+        <p class="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">{tip.data.description}</p>
+        <time class="text-xs text-[var(--color-text-muted)]">
+          {tip.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+        </time>
+      </a>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .cat-btn {
+    padding: 0.35rem 0.85rem; border-radius: 100px;
+    font-size: 0.8rem; font-weight: 500; cursor: pointer;
+    border: 1px solid var(--color-border); background: #fff;
+    color: var(--color-text-muted); transition: all 0.15s;
+    font-family: var(--font-sans);
+  }
+  .cat-btn:hover, .cat-btn.active {
+    background: #e8f0fe; color: #1a73e8; border-color: #1a73e8;
+  }
+  .tip-card {
+    display: block; padding: 1.25rem 1.5rem;
+    border: 1px solid var(--color-border); border-radius: 12px;
+    text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s;
+    background: #fff;
+  }
+  .tip-card:hover {
+    border-color: var(--color-google-blue);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .tip-category {
+    display: inline-block; font-size: 0.7rem; font-weight: 600;
+    color: #1a73e8; background: #e8f0fe;
+    padding: 0.15rem 0.55rem; border-radius: 100px;
+    text-transform: uppercase; letter-spacing: 0.03em;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = (btn as HTMLElement).dataset.cat;
+      document.querySelectorAll('.tip-card').forEach(card => {
+        (card as HTMLElement).style.display = (cat === 'all' || (card as HTMLElement).dataset.cat === cat) ? '' : 'none';
+      });
+    });
+  });
+</script>
